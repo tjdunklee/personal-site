@@ -1,0 +1,47 @@
+//Compiled into application.scss
+// --- All variables will go here
+
+
+//Font Stuff
+$strongFont : 'Oswald', sans-serif;
+$mainFont : 'Quattrocento', serif;
+//$cursiveFont : 'Pacifico', cursive;
+
+
+//Base Units
+$base-unit : 1rem;
+$half-unit : 0.5rem;
+
+
+//Colors
+$white : #fff;
+$grayLight: #f0f1ef;
+$grayMedium: #95988d;
+$grayDark: #333333;
+$lightBlue: #3e80bd;
+
+$color-text-primary : $grayDark;
+$color-text-secondary: $lightBlue;
+
+//Mixins and Stuff
+@mixin breakpoint($point) {
+  @if $point == large-fry {
+    @media (min-width: 900px) { @content; }
+  }
+
+  @else if $point == small-fry {
+    @media (min-width: 600px)  { @content; }
+  }
+}
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -5,7 +5,7 @@
 # Site
 title: Tim Dunklee
 subtitle: Front-End Web Developer - Minneapolis MN
-description:
+description: The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee.
 author: Tim Dunklee
 language: en
 timezone: America/Chicago
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: timdunklee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
