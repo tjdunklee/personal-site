@@ -1,1 +1,105 @@
-This will be the homepage content.
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="section-header">
+      <h2 class="section-header__heading">Work</h2>
+    </div>
+
+    <div class="grid">
+      <div class="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+        <div class="work-item__img">
+          <img src="assets/images/work-lsi.jpg" alt="LSI" />
+        </div>
+
+        <h3>Landscape Structures</h3>
+        <a class="work-item__cta" href="http://www.playlsi.com" target="_blank">visit site &rarr;</a>
+      </div>
+
+      <div class="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+        <div class="work-item__img">
+          <img src="assets/images/work-cambria.jpg" alt="Cambria" />
+        </div>
+
+        <h3>Cambria</h3>
+        <a class="work-item__cta" href="http://www.cambriausa.com" target="_blank">visit site &rarr;</a>
+      </div>
+
+      <div class="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+        <div class="work-item__img">
+          <img src="assets/images/work-eybl.jpg" alt="Nike EYBL" />
+        </div>
+
+        <h3>Nike EYBL</h3>
+        <a class="work-item__cta" href="http://www.nikeeyb.com" target="_blank">visit site &rarr;</a>
+      </div>
+
+      <div class="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+        <div class="work-item__img">
+          <img src="assets/images/work-shriners.jpg" alt="Shriners Hospitals for Children" />
+        </div>
+
+        <h3>Shriners Hospitals</h3>
+        <a class="work-item__cta" href="http://www.shrinershospitalsforchildren.org" target="_blank">visit site &rarr;</a>
+      </div>
+
+      <div class="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+        <div class="work-item__img">
+          <img src="assets/images/work-banner.jpg" alt="Banner Engineering" />
+        </div>
+
+        <h3>Banner Engineering</h3>
+        <a class="work-item__cta" href="http://led.bannerengineering.com" target="_blank">visit site &rarr;</a>
+      </div>
+
+      <div class="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+        <div class="work-item__img">
+          <img src="assets/images/work-bww.jpg" alt="Buffalo Wild Wings More Excuses" />
+        </div>
+
+        <h3>Buffalo Wild Wings</h3>
+        <a class="work-item__cta" href="http://www.buffalowildwings.com/moreexcuses" target="_blank">visit site &rarr;</a>
+      </div>
+
+    </div><!-- end .grid -->
+  </div><!-- end .wrap -->
+</section>
+
+<section class="section section--dark" id="about">
+  <div class="wrap">
+    <div class="section-header">
+      <h2 class="section-header__heading">About</h2>
+    </div>
+
+    <div class="grid">
+      <div class="grid__item one-whole l-fry-one-third">
+        <div class="about__headshot">
+          <img src="assets/images/tim-dunklee-with-son.png" alt="Tim Dunklee" />
+        </div>
+      </div>
+
+      <div class="grid__item one-whole l-fry-two-thirds">
+        <p>I am a freelance front end web developer in Minneapolis, Minnesota. I've worked for several agencies in the Twin Cities area and always enjoy getting involved with a new project or client. I love the ever-changing industry I work in and never stop thinking about it even though my wife thinks I'm slightly obsessed. <a href="mailto:tjdunklee@gmail.com">Contact me</a> to find out more about my work experience and what I'm obsessing over at the moment (currently Flexbox and SVG).</p>
+        <p>In my spare time I like to spend as much time outdoors as possible and snap some <a href="http://www.flickr.com/timdunklee">photos</a> while I'm at it. Snowboarding has always been a passion in my life, but lately kiteboarding is taking over. I call the Twin Cities area (Minneapolis/Saint Paul) home with my beautiful wife Kate, our hilarious son Jake, and our two furry animals.</p>
+      </div>
+    </div>
+  </div><!-- end .wrap -->
+</section>
+
+<section class="section" id="notes">
+  <div class="wrap">
+    <div class="section-header">
+      <h2 class="section-header__heading">Notes</h2>
+    </div>
+
+    <ul class="notes-list">
+      <% page.posts.each(function(post, index) { %>
+        <li class="notes-list__item">
+          <span class="note-meta"><%= post.date.format("MMM D, YYYY") %></span>
+
+          <h3>
+            <a class="note-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
+          </h3>
+        </li>
+      <% }); %>
+    </ul>
+  </div><!-- end .wrap -->
+</section>
