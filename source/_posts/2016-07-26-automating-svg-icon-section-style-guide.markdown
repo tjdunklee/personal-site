@@ -26,7 +26,7 @@ After a little searching in the Github repo, I found the mustache template that 
 ## 2. Tell Gulp About the Template
 We simply need to tell the gulp task where our new template is located.
 
-``` javascript
+``` js
 gulp.task('sprites', function () {
   return gulp.src('assets/icons/*.svg')
   .pipe(svgsprite({
