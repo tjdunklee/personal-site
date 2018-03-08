@@ -1,5 +1,5 @@
 ---
-title: Using a Raspberry Pi as an IP Camera
+title: Using a Raspberry Pi for an Outdoor IP Camera
 date: 2018-03-07 12:17:42
 tags:
 ---
@@ -10,9 +10,9 @@ Determined to solve this situation, I started to look at off-the-shelf commerica
 ## The Plan
 Although I already had the basics of a Raspberry Pi setup at home, I knew I would need to order quite a few new goodies to make this project happen. I quickly put together a list of all the items I would need for this build.
 
-- Raspberry Pi Model B
+- Raspberry Pi
 - Power Supply
-- PiCamera v2
+- Pi Camera v2
 - Extended Camera Cable
 - UV Camera Filter
 - Camera Step-Up Filter Adapter
@@ -21,7 +21,7 @@ Although I already had the basics of a Raspberry Pi setup at home, I knew I woul
 - Extension Cord
 - Cable Gland
 
-Beyond procurring the materials, I also came up with a plan for how the coding portion of the camera would work.
+Beyond the materials list, I also came up with a plan for how the code portion of the camera would work.
 
 1. Run a Python script on startup via Crontab
 2. Take a picture using PiCamera
@@ -29,11 +29,11 @@ Beyond procurring the materials, I also came up with a plan for how the coding p
 4. Sleep for 15 minutes, then repeat the process
 
 ## The Build
-With a solid plan in place, the build out went fairly quickly with only a couple of minor hurdles. The coding portion went very well thanks to the examples that other developers have shared previously! It was the physical build out that I had the most trouble with.
+With a plan in place, the build out went fairly quickly with only a couple of minor hurdles. The coding portion went very well thanks to the examples that other developers have shared previously! It was the physical build out that I had the most trouble with.
 
-The first problem I ran into was with the extension cord. I quickly realized that using a normal extension cord would result in having to drill a large plug-sized hole in the bottom of my waterproof enclosure. If I did this, there was no way I could get a cable gland to produce a fairly waterproof seal. I did some browsing at the local hardware store and found a solution. I figured out that you can buy replacement plugs for extension cords which would allow me to run just the cord through a cable gland and then replace the plug once inside the enclosure. One problem down.
+The first problem I ran into was with the extension cord. I quickly realized that using a normal extension cord would result in having to drill a large plug-sized hole in the bottom of my waterproof enclosure. If I did this, there was no way I could get a cable gland to produce a fairly waterproof seal. I did some browsing at the local hardware store and found a solution. I founds that you can buy replacement plugs for extension cords which would allow me to run just the cord through a cable gland and then replace the plug once inside the enclosure. One problem down.
 
-The other problem I ran into was how to mount the camera to the front of the box yet keep it weather resistant. I came up with an interesting solve using a UV camera filter in combination with a step-up filter adapter. This allowed me to mount the PiCamera on the inside and cover it with the UV filter for a little protection from the elements. Finally, with a little bit of silicone caulking around the UV filter, the build was complete.
+The other problem I ran into was how to mount the camera to the front of the box yet keep it weather resistant. I came up with an interesting solve using a UV camera filter in combination with a step-up filter adapter. This allowed me to mount the Pi Camera on the inside and cover it with the UV filter for a little protection from the elements. Finally, with a little bit of silicone caulking around the UV filter, the build was complete.
 
 ## The Results
 With the build behind me, I was excited to try this beast out. The location picked for it to live was our family cabin in Central Minnnesota which just so happens to be at popular kiteboarding location. What a coincidence! All it took was a few screws, some quick alignment, and plugging it in to get up and running. Within minutes, I could access a recent photo on my server from anywhere in the world. Success!
