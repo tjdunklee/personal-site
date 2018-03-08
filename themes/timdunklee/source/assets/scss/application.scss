@@ -379,6 +379,16 @@ p {
   h2 { font-size: 1.8rem; }
   h3 { font-size: 1.2rem; }
   h4 { font-size: 1rem; }
+
+  ul, ol {
+    margin-left: $base-unit;
+    margin-bottom: $base-unit;
+    font-size: 0.9em;
+  }
+
+  li + li {
+    margin-top: $half-unit/2;
+  }
 }
 
 
