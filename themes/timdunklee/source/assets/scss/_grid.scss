@@ -18,7 +18,6 @@
   width:100%;
   padding-left:$base-unit;
   vertical-align:top;
-  transition: width .5s ease;
 }
 
 @mixin grid-setup($namespace: "") {

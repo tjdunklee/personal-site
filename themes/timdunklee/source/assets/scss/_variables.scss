@@ -18,10 +18,34 @@ $white : #fff;
 $grayLight: #f0f1ef;
 $grayMedium: #95988d;
 $grayDark: #333333;
-$lightBlue: #3e80bd;
+$lightBlue: #366fa3;
 
-$color-text-primary : $grayDark;
+$color-text-primary: $grayDark;
 $color-text-secondary: $lightBlue;
+
+//Root Variables
+:root {
+  --hero-bg-img: url('../images/bg-hero-padre.jpg');
+  --hero-bg-color: $grayDark;
+  --heading-color: $grayDark;
+  --heading-accent-color: $grayMedium;
+  --text-color: $grayDark;
+  --link-color: $lightBlue;
+  --header-icon-color: $white;
+  --minimal-header-bg: $grayDark;
+  --minimal-header-accent: $lightBlue;
+  --social-icon-color: $grayDark;
+  --social-icon-color-hover: lighten($grayDark, 10%);
+  --footer-color: $grayDark;
+}
+
+//Themes
+:root.theme-summer {
+  --hero-bg-img: url('../images/bg-hero-sunset.jpg');
+}
+
+//Z-index Tracking
+$zindex-theme-switcher: 100;
 
 //Mixins and Stuff
 @mixin breakpoint($point) {
