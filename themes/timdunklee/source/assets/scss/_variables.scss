@@ -25,8 +25,9 @@ $color-text-secondary: $lightBlue;
 
 //Root Variables
 :root {
-  --hero-bg-img: url('../images/bg-hero-padre.jpg');
-  --hero-bg-color: $grayDark;
+  --hero-bg-img: url('../images/bg-hero-winter.jpg');
+  --hero-bg-color: $white;
+  --hero-heading-color: $grayDark;
   --heading-color: $grayDark;
   --heading-accent-color: $grayMedium;
   --text-color: $grayDark;
@@ -41,7 +42,9 @@ $color-text-secondary: $lightBlue;
 
 //Themes
 :root.theme-summer {
-  --hero-bg-img: url('../images/bg-hero-sunset.jpg');
+  --hero-bg-img: url('../images/bg-hero-summer.jpg');
+  --hero-bg-color: $grayDark;
+  --hero-heading-color: $white;
 }
 
 //Z-index Tracking

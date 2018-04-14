@@ -164,7 +164,7 @@ p {
   background: var(--hero-bg-color) var(--hero-bg-img) no-repeat center center;
   background-size: cover;
   text-align: center;
-  color: $white;
+  color: var(--hero-heading-color);
 }
 
 .header__inner {
