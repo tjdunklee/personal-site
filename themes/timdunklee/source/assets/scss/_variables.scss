@@ -32,7 +32,6 @@ $color-text-secondary: $lightBlue;
   --heading-accent-color: $grayMedium;
   --text-color: $grayDark;
   --link-color: $lightBlue;
-  --header-icon-color: $white;
   --minimal-header-bg: $grayDark;
   --minimal-header-accent: $lightBlue;
   --social-icon-color: $grayDark;
@@ -43,8 +42,17 @@ $color-text-secondary: $lightBlue;
 //Themes
 :root.theme-summer {
   --hero-bg-img: url('../images/bg-hero-summer.jpg');
-  --hero-bg-color: $grayDark;
+  --hero-bg-color: #3D445D;
   --hero-heading-color: $white;
+  --heading-color: #3D445D;
+  --heading-accent-color: #DD6D60;
+  --text-color: #3D445D;
+  --link-color: #DD6D60;
+  --minimal-header-bg: #3D445D;
+  --minimal-header-accent: #DD6D60;
+  --social-icon-color: #3D445D;
+  --social-icon-color-hover: lighten(#3D445D, 10%);
+  --footer-color: #3D445D;
 }
 
 //Z-index Tracking
