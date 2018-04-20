@@ -220,11 +220,24 @@ p {
   padding: 0;
   margin-left: $half-unit/2;
   border: 0;
-  background-color: transparent;
+  background: transparent;
 }
 
 .theme-icon {
-  fill: currentColor;
+  display: none;
+  fill: var(--hero-heading-color);
+
+  .header-minimal & {
+    fill: $white;
+  }
+}
+
+.theme-winter .theme-icon--summer {
+  display: inline-block;
+}
+
+.theme-summer .theme-icon--winter {
+  display: inline-block;
 }
 
 .welcome-paragraph {
