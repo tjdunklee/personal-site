@@ -46,7 +46,7 @@
 
 // typed js init
 (function() {
-  const typedHeadline = document.querySelector('.js-headline');
+  //const typedHeadline = document.querySelector('.js-headline');
 
   if (typedHeadline) {
     new Typed(typedHeadline, {
