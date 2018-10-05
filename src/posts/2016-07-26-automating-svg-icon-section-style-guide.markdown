@@ -63,6 +63,6 @@ I'm not going to waste your time here, but don't forget to add a default size fo
 ## 5. Profit.
 Load up that style guide and bask in your glory!
 
-![Example of SVG Icon Section](/assets/images/notes/2016-automating-svg-icon-section.png)
+![Example of SVG Icon Section](/images/notes/2016-automating-svg-icon-section.png)
 
 Now every time you add a new SVG file in your icons directory, it will show up in the style guide. Magic!
