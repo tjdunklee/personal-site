@@ -1,0 +1,49 @@
+// compiled into application.scss
+// -- contains the grid
+
+.grid{
+  margin-left: -$base-unit;
+  list-style: none;
+  margin-bottom: 0;
+  @include clearfix();
+}
+
+//Very infrequently occurring grid wrappers as children of grid wrappers.
+.grid > .grid{
+  margin-left:0;
+}
+
+.grid__item{
+  float: left;
+  width:100%;
+  padding-left:$base-unit;
+  vertical-align:top;
+}
+
+@mixin grid-setup($namespace: "") {
+  //Whole
+  .#{$namespace}one-whole         { width:100%; }
+
+  //Halves
+  .#{$namespace}one-half          { width:50%; }
+
+  //Thirds
+  .#{$namespace}one-third         { width:33.333%; }
+  .#{$namespace}two-thirds        { width:66.666%; }
+
+  //Quarters
+  .#{$namespace}one-quarter       { width:25%; }
+  .#{$namespace}two-quarters      { @extend .#{$namespace}one-half; }
+  .#{$namespace}three-quarters    { width:75%; }
+}
+
+@include grid-setup();
+
+@include breakpoint(small-fry) {
+  @include grid-setup("s-fry-");
+}
+
+@include breakpoint(large-fry) {
+  @include grid-setup("l-fry-");
+}
+
