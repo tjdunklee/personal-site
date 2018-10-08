@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Building a Home Weather App using AngularJS"
+date: 2016-01-04
 ---
 Living in Minnesota, you become very dependent on weather apps to help you survive the unpredictable conditions. I always found myself studying ['Dark Sky'](http://darkskyapp.com/) to make an informed decision about what to put on my son before we headed out for the day. It seemed like a waste of time to always be pulling out my phone and sifting through all of the available weather data, especially if I was trying to do this while carrying a crying toddler. After pondering this problem for a while, I decided to make a solution for my family and learn something in the process.
 
