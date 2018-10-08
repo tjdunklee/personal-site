@@ -38,10 +38,10 @@ class Template extends React.Component {
       )
     } else {
       header = (
-        <header class="header-minimal">
-          <div class="wrap header__inner">
-            <div class="logo logo--minimal">
-              <Link to={'/'} class="logo logo--minimal">Tim <span>Dunklee</span></Link>
+        <header className="header-minimal">
+          <div className="wrap header__inner">
+            <div className="logo logo--minimal">
+              <Link to={'/'} className="logo logo--minimal">Tim <span>Dunklee</span></Link>
             </div>
             <div className="theme-switcher">
               <button className="theme-switcher__button js-theme-switcher-button" title="Switch Theme">
@@ -62,7 +62,7 @@ class Template extends React.Component {
 
     const footer = (
       <footer>
-        <div class="wrap">
+        <div className="wrap">
           <p>
             Made by Tim with a <a href="http://www.flickr.com/photos/timdunklee/6894884410/">large dog</a> on his&nbsp;lap. &copy;2018
           </p>
