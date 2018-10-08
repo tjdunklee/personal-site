@@ -18,7 +18,6 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          htmlAttributes={{ lang: 'en', class: 'theme-winter' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />

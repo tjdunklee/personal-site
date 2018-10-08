@@ -1,10 +1,18 @@
 import React from 'react'
+import Layout from '../components/layout'
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-)
+class NotFoundPage extends React.Component {
+  render() {
+    return (
+      <Layout location={this.props.location}>
+        <div className="not-found">
+          <div className="wrap wrap--narrow">
+            <h1 className="not-found__title">404</h1>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+}
 
 export default NotFoundPage

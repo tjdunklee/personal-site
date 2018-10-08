@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
 import '../assets/scss/application.scss'
 
@@ -72,6 +73,9 @@ class Template extends React.Component {
 
     return (
       <div>
+        <Helmet
+          htmlAttributes={{ lang: 'en', class: 'theme-winter' }}
+        />
         {header}
         <div className="main-content">
           {children}
