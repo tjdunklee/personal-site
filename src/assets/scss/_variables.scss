@@ -5,7 +5,6 @@
 //Font Stuff
 $strongFont : 'Oswald', sans-serif;
 $mainFont : 'Quattrocento', serif;
-//$cursiveFont : 'Pacifico', cursive;
 
 
 //Base Units
@@ -26,17 +25,17 @@ $color-text-secondary: $lightBlue;
 //Root Variables
 :root {
   --hero-bg-img: url('/assets/images/bg-hero-winter.jpg');
-  --hero-bg-color: $white;
-  --hero-heading-color: $grayDark;
-  --heading-color: $grayDark;
-  --heading-accent-color: $grayMedium;
-  --text-color: $grayDark;
-  --link-color: $lightBlue;
-  --minimal-header-bg: $grayDark;
-  --minimal-header-accent: $lightBlue;
-  --social-icon-color: $grayDark;
+  --hero-bg-color: #{$white};
+  --hero-heading-color: #{$grayDark};
+  --heading-color: #{$grayDark};
+  --heading-accent-color: #{$grayMedium};
+  --text-color: #{$grayDark};
+  --link-color: #{$lightBlue};
+  --minimal-header-bg: #{$grayDark};
+  --minimal-header-accent: #{$lightBlue};
+  --social-icon-color: #{$grayDark};
   --social-icon-color-hover: lighten($grayDark, 10%);
-  --footer-color: $grayDark;
+  --footer-color: #{$grayDark};
 }
 
 //Themes
