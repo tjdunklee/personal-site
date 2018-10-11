@@ -32,6 +32,12 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+              fonts: [`Quattrocento`, `Oswald\:300,700`]
+            }
+          },
         ],
       },
     },
