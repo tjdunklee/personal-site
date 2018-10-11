@@ -73,9 +73,10 @@ class Template extends React.Component {
 
     return (
       <div>
-        <Helmet
-          htmlAttributes={{ lang: 'en', class: 'theme-winter' }}
-        />
+        <Helmet defaultTitle={`Tim Dunklee - Front End Web Developer - Minneapolis MN`} titleTemplate={`%s | Tim Dunklee`}>
+          <meta name="description" content="The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee." />
+          <html lang="en" class="theme-winter" />
+        </Helmet>
         {header}
         <div className="main-content">
           {children}

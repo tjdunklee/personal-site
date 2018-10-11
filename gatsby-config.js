@@ -2,10 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Tim Dunklee',
     author: 'Tim Dunklee',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    description: 'The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee.',
+    siteUrl: 'https://www.timdunklee.com',
   },
-  pathPrefix: '/gatsby-starter-blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -49,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Tim Dunklee's Portfolio`,
+        short_name: `Tim Dunklee`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
