@@ -1,12 +1,35 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
+import Typewriter from 't-writer.js'
 
 import Contact from '../components/Section-contact'
 
 import '../assets/scss/application.scss'
 
 class Template extends React.Component {
+  componentDidMount() {
+    console.log('Layout Component DID MOUNT!')
+
+    const typewriterText = document.querySelector('.js-headline')
+    const typewriterOptions = {
+      loop: true
+    }
+
+    if (typewriterText) {
+      const typewriter = new Typewriter(typewriterText, typewriterOptions)
+      typewriter
+        .strings(
+          200,
+          "developer",
+          "father", 
+          "snowboarder",
+          "photographer"
+        )
+        .start()
+    }
+  }
+
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
