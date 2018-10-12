@@ -12,20 +12,28 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <About />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link to={'posts' + node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+        <section className="section" id="notes">
+          <div className="wrap">
+            <div className="section-header">
+              <h2 class="section-header__heading">Notes</h2>
             </div>
-          )
-        })}
+            <ul className="notes-list">
+              {posts.map(({ node }) => {
+                const title = get(node, 'frontmatter.title') || node.fields.slug
+                return (
+                  <li className="notes-list__item" key={node.fields.slug}>
+                    <span className="note-meta">{node.frontmatter.date}</span>
+                    <h3>
+                      <Link className="note-link" to={'posts' + node.fields.slug}>
+                        {title}
+                      </Link>
+                    </h3>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </section>
       </Layout>
     )
   }
@@ -38,7 +46,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
