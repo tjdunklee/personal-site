@@ -80,10 +80,10 @@ class Template extends React.Component {
           <html lang="en" class="theme-winter" />
         </Helmet>
         {header}
-        <div className="main-content">
+        <main className="main-content">
           {children}
           <Contact/>
-        </div>
+        </main>
         {footer}
       </div>
     )

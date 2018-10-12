@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link,graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
 import Layout from '../components/layout'
 
 class BlogPostTemplate extends React.Component {
@@ -17,32 +16,15 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title}`}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-        <Bio />
-
-        <ul>
-          <li>
-            {
-              previous &&
-              <Link to={'posts' + previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            }
-          </li>
-          <li>
-            {
-              next &&
-              <Link to={'posts' + next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            }
-          </li>
-        </ul>
+        <article className="post">
+          <div className="wrap wrap--narrow">
+            <header className="post__header">
+              <h1 className="h2 post__title">{post.frontmatter.title}</h1>
+              <p className="post__meta">{post.frontmatter.date}</p>
+            </header>
+            <div className="post__content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        </article>
       </Layout>
     )
   }
