@@ -9,8 +9,6 @@ import '../assets/scss/application.scss'
 
 class Template extends React.Component {
   componentDidMount() {
-    console.log('Layout Component DID MOUNT!')
-
     const typewriterText = document.querySelector('.js-headline')
     const typewriterOptions = {
       loop: true

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
+import Work from '../components/Section-work'
 import About from '../components/Section-about'
 import Layout from '../components/layout'
 
@@ -11,6 +12,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <Work />
         <About />
         <section className="section" id="notes">
           <div className="wrap">
