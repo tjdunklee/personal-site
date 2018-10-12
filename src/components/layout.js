@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
+import Contact from '../components/Section-contact'
+
 import '../assets/scss/application.scss'
 
 class Template extends React.Component {
@@ -65,7 +67,7 @@ class Template extends React.Component {
       <footer>
         <div className="wrap">
           <p>
-            Made by Tim with a <a href="http://www.flickr.com/photos/timdunklee/6894884410/">large dog</a> on his&nbsp;lap. &copy;2018
+            Made by Tim with a <a href="https://www.flickr.com/photos/timdunklee/6894884410/">large dog</a> on his&nbsp;lap. &copy;2018
           </p>
         </div>
       </footer>
@@ -80,6 +82,7 @@ class Template extends React.Component {
         {header}
         <div className="main-content">
           {children}
+          <Contact/>
         </div>
         {footer}
       </div>
