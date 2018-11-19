@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Typewriter from 't-writer.js'
 
@@ -9,12 +8,34 @@ import Contact from '../components/Section-contact'
 import '../assets/scss/application.scss'
 
 class Template extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      darkMode: false
+    };
+  }
+
   componentDidMount() {
+    this.updateStateFromLocalStorage();
+    this.startTypewriter();
+  }
+
+  updateStateFromLocalStorage() {
+    let isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+    console.log(isDarkMode);
+    this.setState({darkMode: isDarkMode}, function () {
+      console.log(this.state.darkMode);
+  });
+  }
+  
+  startTypewriter() {
     const typewriterText = document.querySelector('.js-headline')
     const typewriterOptions = {
-      loop: true
+      loop: true,
+      typeColor: 'inherit',
+      cursorColor: 'inherit'
     }
-
+  
     if (typewriterText) {
       const typewriter = new Typewriter(typewriterText, typewriterOptions)
       typewriter
@@ -27,6 +48,12 @@ class Template extends React.Component {
         )
         .start()
     }
+  }
+
+  toggleDarkMode() {
+    const newDarkModeBoolean = !this.state.darkMode;
+    this.setState({darkMode: newDarkModeBoolean});
+    localStorage.setItem('darkMode', JSON.stringify(newDarkModeBoolean));
   }
 
   render() {
@@ -46,9 +73,10 @@ class Template extends React.Component {
       <div>
         <Helmet defaultTitle={`Tim Dunklee - Front End Web Developer - Minneapolis MN`} titleTemplate={`%s | Tim Dunklee`}>
           <meta name="description" content="The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee." />
-          <html lang="en" class="theme-winter" />
+          <html lang="en" class={ this.state.darkMode ? 'dark-mode' : '' } />
         </Helmet>
         <Header location={location}/>
+        <button onClick={this.toggleDarkMode.bind(this)}>Toggle Dark Mode</button>
         <main className="main-content">
           {children}
           <Contact/>
