@@ -219,20 +219,16 @@ p {
   top: $base-unit;
   right: $base-unit;
   z-index: $zindex-theme-switcher;
-
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  
   .header-minimal & {
     position: relative;
     top: auto;
     right: auto;
   }
-}
-
-.theme-switcher__button {
-  cursor: pointer;
-  padding: 0;
-  margin-left: $half-unit/2;
-  border: 0;
-  background: transparent;
 }
 
 .theme-icon {
@@ -244,11 +240,15 @@ p {
   }
 }
 
-.theme-winter .theme-icon--summer {
+.theme-icon--winter {
   display: inline-block;
+  
+  .dark-mode & {
+    display: none;
+  }
 }
 
-.theme-summer .theme-icon--winter {
+.dark-mode .theme-icon--sun {
   display: inline-block;
 }
 

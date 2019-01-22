@@ -75,8 +75,7 @@ class Template extends React.Component {
           <meta name="description" content="The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee." />
           <html lang="en" class={ this.state.darkMode ? 'dark-mode' : '' } />
         </Helmet>
-        <Header location={location}/>
-        <button onClick={this.toggleDarkMode.bind(this)}>Toggle Dark Mode</button>
+        <Header location={location} toggleDarkMode={this.toggleDarkMode.bind(this)} />
         <main className="main-content">
           {children}
           <Contact/>

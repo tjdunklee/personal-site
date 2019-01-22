@@ -21,7 +21,7 @@ class Header extends React.Component {
                 </p>
               </div>
             </div>
-            <ThemeSwitcher/>
+            <ThemeSwitcher toggleDarkMode={this.props.toggleDarkMode}/>
           </div>
         </header>
       )
@@ -32,7 +32,7 @@ class Header extends React.Component {
             <div className="logo logo--minimal">
               <Link to={'/'} className="logo logo--minimal">Tim <span>Dunklee</span></Link>
             </div>
-            <ThemeSwitcher/>
+            <ThemeSwitcher toggleDarkMode={this.props.toggleDarkMode}/>
           </div>
         </header>
       )
