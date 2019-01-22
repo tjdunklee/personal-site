@@ -22,10 +22,7 @@ class Template extends React.Component {
 
   updateStateFromLocalStorage() {
     let isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
-    console.log(isDarkMode);
-    this.setState({darkMode: isDarkMode}, function () {
-      console.log(this.state.darkMode);
-  });
+    this.setState({darkMode: isDarkMode});
   }
   
   startTypewriter() {
@@ -75,7 +72,7 @@ class Template extends React.Component {
           <meta name="description" content="The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee." />
           <html lang="en" class={ this.state.darkMode ? 'dark-mode' : '' } />
         </Helmet>
-        <Header location={location} toggleDarkMode={this.toggleDarkMode.bind(this)} />
+        <Header location={location} toggleDarkMode={this.toggleDarkMode.bind(this)} darkMode={this.state.darkMode} />
         <main className="main-content">
           {children}
           <Contact/>
