@@ -1,18 +1,9 @@
-# Tim Dunklee Personal Website
+# gatsby-starter-blog
+Gatsby starter for creating a blog
 
-## Overview
-My personal site built using [Hexo](https://hexo.io/) and deployed to [Netlify](https://www.netlify.com/).
+Install this starter (assuming Gatsby is installed) by running from your CLI:
 
-## Local Development
-```
-npm install hexo-cli -g
-npm install
-hexo server
-```
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
 
-## Local Static Build
-```
-hexo clean
-hexo generate
-```
-
+## Running in development
+`gatsby develop`

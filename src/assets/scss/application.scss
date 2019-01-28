@@ -1,0 +1,562 @@
+/*
+ * TimDunklee.com - Version 4.0 2018
+ *
+ * Hey thanks for looking at my CSS, this must mean you are cool.
+ * This site was built with SASS/SCSS * Shoot me an email with any questions/concerns: tjdunklee@gmail.com.
+ */
+
+//import awesome variables and mixins
+@import "variables";
+
+/*==========================================================================
+  RESET
+  ========================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size:100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+// SET BORDER BOX SIZING BECAUSE IT IS AWESOME
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/*==========================================================================
+  TYPOGRAPHY
+  ========================================================================== */
+
+html {
+  font-size: 18px;
+
+  @include breakpoint(small-fry) {
+    font-size: 20px;
+  }
+}
+
+body {
+  line-height: 1.5;
+  font-family: $mainFont;
+  color: var(--text-color);
+  background-color: var(--default-bg-color);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: $strongFont;
+}
+
+h1, .h1 {
+  font-size: 3rem; // 60px
+}
+h2, .h2 {
+  font-size: 2.4rem; // 48px
+}
+h3, .h3 {
+  font-size: 1.8rem; // 36px
+}
+h4, .h4 {
+  font-size: 1.2rem; // 24px
+}
+h5, .h5 {
+  font-size: 1rem; // 20px
+}
+.h6 {
+  font-size: 0.8rem; // 16px
+}
+
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p a {
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: $base-unit;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/*==========================================================================
+  ICONS
+  ========================================================================== */
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+/*==========================================================================
+  GRID
+  ========================================================================== */
+
+@import "grid";
+
+
+/*==========================================================================
+  GENERAL LAYOUT
+  ========================================================================== */
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $base-unit;
+}
+
+.wrap--narrow {
+  max-width: 800px;
+}
+
+
+/*==========================================================================
+  HEADER
+  ========================================================================== */
+
+.header {
+  position: relative;
+  background: var(--hero-bg-color) url('../images/bg-hero-winter.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: var(--hero-heading-color);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: var(--hero-overlay-opacity);
+    background-color: var(--hero-bg-color);
+  }
+}
+
+.header__inner {
+  position: relative;
+}
+
+.logo {
+  font-family: $strongFont;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  > span {
+    font-weight: 300;
+    font-size: 1.05em; // keep it relative to the size of the rest
+    letter-spacing: normal;
+  }
+}
+
+.logo--large {
+  font-size: 3rem;
+
+  @include breakpoint(small-fry) {
+    font-size: 4rem;
+  }
+}
+
+.logo--minimal > a {
+  font-size: 1.8rem;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.theme-switcher {
+  position: absolute;
+  top: $base-unit;
+  right: $base-unit;
+  z-index: $zindex-theme-switcher;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  
+  .header-minimal & {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+}
+
+.theme-icon {
+  display: none;
+  fill: var(--hero-heading-color);
+
+  .header-minimal & {
+    fill: $white;
+  }
+}
+
+.theme-icon--winter {
+  display: inline-block;
+  
+  .dark-mode & {
+    display: none;
+  }
+}
+
+.dark-mode .theme-icon--sun {
+  display: inline-block;
+}
+
+.welcome-paragraph {
+  font-size: 2.2rem;
+  margin-top: $half-unit;
+}
+
+.header-content {
+  position: relative;
+  padding: $base-unit*8 0;
+  z-index: 20;
+}
+
+.header-minimal {
+  padding: $half-unit 0;
+  background-color: var(--minimal-header-bg);
+  border-top: 4px solid var(--minimal-header-accent);
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes blink {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes blink {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+
+/*==========================================================================
+  SECTIONS
+  ========================================================================== */
+
+.section {
+  padding: $base-unit*2 0;
+}
+
+.section--alt-bg {
+  background-color: var(--section-alt-bg-color);
+}
+
+.section-header {
+  position: relative;
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: $half-unit*3;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    border-top: 4px solid var(--heading-accent-color  );
+    margin-top: -4px;
+    z-index: 1;
+  }
+}
+
+.section-header__heading {
+  position: relative;
+  display: inline-block;
+  background: var(--default-bg-color);
+  z-index: 2;
+  padding: 0 $base-unit;
+
+  .section--alt-bg & {
+    background-color: var(--section-alt-bg-color);
+  }
+}
+
+
+/*==========================================================================
+  WORK
+  ========================================================================== */
+
+.work-item {
+  margin: 0 auto $half-unit*3;
+
+  &:nth-of-type(2n + 1) {
+    @include breakpoint(small-fry) {
+      clear: left;
+    }
+    @include breakpoint(large-fry) {
+      clear: none;
+    }
+  }
+
+  &:nth-of-type(3n + 1) {
+    @include breakpoint(large-fry) {
+      clear: left;
+    }
+  }
+}
+
+.work-item__img {
+  border: 2px solid $grayLight;
+  margin-bottom: $half-unit;
+
+  > img {
+    display: block;
+  }
+}
+
+
+/*==========================================================================
+  ABOUT
+  ========================================================================== */
+
+.about__headshot {
+  text-align: center;
+  margin-bottom: $base-unit*2;
+
+  @include breakpoint(large-fry) {
+    margin-bottom: 0;
+  }
+}
+
+
+/*==========================================================================
+  NOTES
+  ========================================================================== */
+
+.notes-list {
+  list-style: none;
+}
+
+.notes-list__item + .notes-list__item {
+  margin-top: $base-unit;
+}
+
+.note-meta {
+  text-transform: uppercase;
+  font-family: $strongFont;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+
+/*==========================================================================
+  POSTS
+  - handles both notes and also work details
+========================================================================== */
+
+.post {
+  padding: $base-unit*3 0;
+}
+
+.post__header {
+  margin-bottom: $base-unit;
+}
+
+.post__title {
+  margin-bottom: $half-unit;
+}
+
+.post__meta {
+  text-transform: uppercase;
+  font-family: $strongFont;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.post__content {
+  h1, h2, h3, h4, h5 {
+    margin-top: $base-unit * 2;
+    margin-bottom: $half-unit;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1rem; }
+
+  ul, ol {
+    margin-left: $base-unit;
+    margin-bottom: $base-unit;
+    font-size: 0.9em;
+  }
+
+  li + li {
+    margin-top: $half-unit/2;
+  }
+}
+
+
+/*==========================================================================
+  CONTACT
+  ========================================================================== */
+
+.contact-email {
+  font-family: $strongFont;
+  font-weight: 700;
+  margin-bottom: $half-unit * 3;
+  font-size: 1.2rem;
+}
+
+.social {
+  font-size: 2rem;
+}
+
+.social__item {
+  display: inline-block;
+  fill: var(--social-icon-color);
+  margin-left: $half-unit;
+  text-decoration: none;
+
+  & + & {
+    margin-left: $half-unit;
+  }
+
+  &:hover, &:focus {
+    fill: var(--social-icon-color-hover);
+  }
+}
+
+
+/*==========================================================================
+  NOT FOUND aka 404
+  ========================================================================== */
+
+.not-found {
+  padding: $base-unit*3 0;
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: 22vw;
+}
+
+/*==========================================================================
+  FOOTER
+  ========================================================================== */
+
+footer {
+  padding: $base-unit 0;
+  text-align: center;
+  color: white;
+  background-color: var(--footer-color);
+
+  a {
+    color: white;
+  }
+}
+
+
+/*==========================================================================
+  HELPERS
+  ========================================================================== */
+
+.clearfix {
+  @include clearfix();
+}
+
+// Hiding w/o display:none; for accessibility
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/*==========================================================================
+  SYNTAX HIGHLIGHTING
+  ========================================================================== */
+
+@import "syntax-highlighting";
