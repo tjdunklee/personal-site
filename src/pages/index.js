@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
                   <li className="notes-list__item" key={node.fields.slug}>
                     <span className="note-meta">{node.frontmatter.date}</span>
                     <h3>
-                      <Link className="note-link" to={'posts' + node.fields.slug}>
+                      <Link className="note-link" to={'notes' + node.fields.slug}>
                         {title}
                       </Link>
                     </h3>
