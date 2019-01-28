@@ -1,9 +1,8 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# TimDunklee.com
+My personal site that was created using [Gatsby](https://www.gatsbyjs.org/) and hosted on [Netlify](https://www.netlify.com/). 
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
-
-## Running in development
+## Running development
 `gatsby develop`
+
+## Running a build
+`gatsby build`
