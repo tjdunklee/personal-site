@@ -162,7 +162,9 @@ p {
 
 .header {
   position: relative;
-  background: var(--hero-bg-color) url('../images/bg-hero-winter.jpg') no-repeat center center;
+  background-color: var(--hero-bg-color);
+  background-image: url('../images/bg-hero-winter.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: var(--hero-heading-color);
