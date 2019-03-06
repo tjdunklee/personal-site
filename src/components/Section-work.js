@@ -23,7 +23,7 @@ class Work extends React.Component {
               </div>
 
               <h3>Landscape Structures</h3>
-              <a className="work-item__cta" href="http://www.playlsi.com" target="_blank">visit site &rarr;</a>
+              <a className="work-item__cta" href="http://www.playlsi.com" target="_blank" rel="noopener">visit site &rarr;</a>
             </div>
 
             <div className="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
@@ -32,7 +32,7 @@ class Work extends React.Component {
               </div>
 
               <h3>Cambria</h3>
-              <a className="work-item__cta" href="http://www.cambriausa.com" target="_blank">visit site &rarr;</a>
+              <a className="work-item__cta" href="http://www.cambriausa.com" target="_blank" rel="noopener">visit site &rarr;</a>
             </div>
 
             <div className="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
@@ -41,7 +41,7 @@ class Work extends React.Component {
               </div>
 
               <h3>Nike EYBL</h3>
-              <a className="work-item__cta" href="http://www.nikeeyb.com" target="_blank">visit site &rarr;</a>
+              <a className="work-item__cta" href="http://www.nikeeyb.com" target="_blank" rel="noopener">visit site &rarr;</a>
             </div>
 
             <div className="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
@@ -50,7 +50,7 @@ class Work extends React.Component {
               </div>
 
               <h3>Shriners Hospitals</h3>
-              <a className="work-item__cta" href="http://www.shrinershospitalsforchildren.org" target="_blank">visit site &rarr;</a>
+              <a className="work-item__cta" href="http://www.shrinershospitalsforchildren.org" target="_blank" rel="noopener">visit site &rarr;</a>
             </div>
 
             <div className="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
@@ -59,7 +59,7 @@ class Work extends React.Component {
               </div>
 
               <h3>Banner Engineering</h3>
-              <a className="work-item__cta" href="http://led.bannerengineering.com" target="_blank">visit site &rarr;</a>
+              <a className="work-item__cta" href="http://led.bannerengineering.com" target="_blank" rel="noopener">visit site &rarr;</a>
             </div>
 
             <div className="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
@@ -68,7 +68,7 @@ class Work extends React.Component {
               </div>
 
               <h3>Buffalo Wild Wings</h3>
-              <a className="work-item__cta" href="http://www.buffalowildwings.com/moreexcuses" target="_blank">visit site &rarr;</a>
+              <a className="work-item__cta" href="http://www.buffalowildwings.com/moreexcuses" target="_blank" rel="noopener">visit site &rarr;</a>
             </div>
 
           </div>
