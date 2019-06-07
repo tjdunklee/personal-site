@@ -6,6 +6,11 @@ module.exports = {
     siteUrl: 'https://www.timdunklee.com',
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,8 +49,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -66,7 +69,5 @@ module.exports = {
         icon: `src/assets/images/favicon-512x512.png`,
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
   ],
 }
