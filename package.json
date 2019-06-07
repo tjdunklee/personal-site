@@ -16,7 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-sharp": "^2.0.22",
-    "gatsby-remark-copy-linked-files": "^2.0.5",
+    "gatsby-remark-copy-linked-files": "^2.0.13",
     "gatsby-remark-images": "^2.0.1",
     "gatsby-remark-prismjs": "^3.0.0",
     "gatsby-remark-responsive-iframe": "^2.0.5",

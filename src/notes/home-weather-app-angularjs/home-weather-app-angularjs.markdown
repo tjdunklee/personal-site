@@ -10,8 +10,9 @@ After some research, I came to the conclusion that AngularJS would work quite we
 ## Up and Running
 I'm no product designer, but I was very happy with the simplicity of my design for the application. I chose to use very simple colors and icons to represent an hourly forecast for the day. The application runs day and night in our kitchen and it has proven to be very helpful in our daily lives!
 
-![DunkStation Runnning](/images/notes/2016-weather-app-running.jpg)
-![Raspberry Pi for Apache](/images/notes/2016-weather-app-raspberry-pi.jpg)
+![DunkStation Runnning](2016-weather-app-running.jpg)
+
+![Raspberry Pi for Apache](2016-weather-app-raspberry-pi.jpg)
 
 ## Next Steps
 The plan is to keep making this better and help organize our lives. I called it the "DunkStation" because I have bigger plans for it. The next thing on the agenda is getting our recipes stored for easy access. I'm planning on storing these in a Wordpress detached back-end and use the WP REST API to access this info using AngularJS. I'll update when that is complete!

@@ -17,10 +17,14 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
+              quality: 80,
+              withWebp: true,
+              linkImagesToOriginal: false
             },
           },
           {
@@ -30,7 +34,6 @@ module.exports = {
             },
           },
           'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           {
             resolve: `gatsby-plugin-google-fonts`,

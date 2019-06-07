@@ -38,12 +38,17 @@ The other problem I ran into was how to mount the camera to the front of the box
 ## The Results
 With the build behind me, I was excited to try this beast out. The location picked for it to live was our family cabin in Central Minnnesota which just so happens to be at popular kiteboarding location. What a coincidence! All it took was a few screws, some quick alignment, and plugging it in to get up and running. Within minutes, I could access a recent photo on my server from anywhere in the world. Success!
 
-![Webcam using PiCamera](/images/notes/2018-webcam-full.jpg)
-![Webcam using PiCamera - Front of Enclosure](/images/notes/2018-webcam-front.jpg)
-![Webcam using PiCamera - Inside of Enclosure](/images/notes/2018-webcam-open.jpg)
-![Webcam using PiCamera - Cable Gland](/images/notes/2018-webcam-cable-gland.jpg)
-![Webcam using PiCamera - Camera Mount](/images/notes/2018-webcam-picamera-mounting.jpg)
-![Webcam using PiCamera - Example Capture](/images/notes/2018-webcam-example-capture.jpg)
+![Webcam using PiCamera](2018-webcam-full.jpg)
+
+![Webcam using PiCamera - Front of Enclosure](2018-webcam-front.jpg)
+
+![Webcam using PiCamera - Inside of Enclosure](2018-webcam-open.jpg)
+
+![Webcam using PiCamera - Cable Gland](2018-webcam-cable-gland.jpg)
+
+![Webcam using PiCamera - Camera Mount](2018-webcam-picamera-mounting.jpg)
+
+![Webcam using PiCamera - Example Capture](2018-webcam-example-capture.jpg)
 
 ## Questions?
 If you are building out a similar project and have questions for me at all, feel free to contact me below. I always love to help!
