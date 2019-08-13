@@ -63,19 +63,5 @@ module.exports = {
         icon: `src/assets/images/favicon-512x512.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Quattrocento`
-          },
-          {
-            family: `Oswald`,
-            variants: [`300`, `700`]
-          },
-        ],
-      },
-    },
   ],
 }
