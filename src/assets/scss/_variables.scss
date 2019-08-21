@@ -25,37 +25,25 @@ $color-text-secondary: $lightBlue;
 //Root Variables
 :root {
   --default-bg-color: #{$white};
-  --section-alt-bg-color: #{$grayLight};
-  --hero-bg-color: #{$grayLight};
-  --hero-overlay-opacity: 0;
-  --hero-heading-color: 0;
   --heading-color: #{$grayDark};
   --heading-accent-color: #{$grayMedium};
   --text-color: #{$grayDark};
   --link-color: #{$lightBlue};
-  --minimal-header-bg: #{$grayDark};
   --minimal-header-accent: #{$lightBlue};
   --social-icon-color: #{$grayDark};
   --social-icon-color-hover: #{lighten($grayDark, 10%)};
-  --footer-color: #{$grayDark};
 }
 
 //Themes
 :root.dark-mode {
   --default-bg-color: #{$grayDark};
-  --section-alt-bg-color: #{darken($grayDark, 5%)};
-  --hero-bg-color: #{$grayDark};
-  --hero-overlay-opacity: 0.8;
-  --hero-heading-color: #{$white};
   --heading-color: #{$grayLight};
   --heading-accent-color: #{$grayMedium};
   --text-color:  #{$white};
   --link-color: #{lighten($lightBlue, 20%)};
-  --minimal-header-bg: #{darken($grayDark, 5%)};
   --minimal-header-accent: #{$lightBlue};
   --social-icon-color: #{$grayLight};
   --social-icon-color-hover: #{lighten($grayLight, 10%)};
-  --footer-color: #{$grayDark};
 }
 
 //Z-index Tracking

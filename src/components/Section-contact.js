@@ -3,7 +3,7 @@ import React from 'react'
 class Contact extends React.Component {
   render() {
     return (
-      <section className="section section--alt-bg" id="contact">
+      <section className="section" id="contact">
         <div className="wrap">
           <div className="section-header">
             <h2 className="section-header__heading">Contact</h2>

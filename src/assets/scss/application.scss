@@ -1,5 +1,5 @@
 /*
- * TimDunklee.com - Version 4.0 2018
+ * TimDunklee.com - Version 5.0 2019
  *
  * Hey thanks for looking at my CSS, this must mean you are cool.
  * This site was built with SASS/SCSS * Shoot me an email with any questions/concerns: tjdunklee@gmail.com.
@@ -58,10 +58,10 @@ svg {
   ========================================================================== */
 
 html {
-  font-size: 18px;
+  font-size: 1.125rem;
 
   @include breakpoint(small-fry) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -146,13 +146,13 @@ p {
   ========================================================================== */
 
 .wrap {
-  max-width: 1200px;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 $base-unit;
 }
 
 .wrap--narrow {
-  max-width: 800px;
+  max-width: 40rem;
 }
 
 
@@ -162,24 +162,7 @@ p {
 
 .header {
   position: relative;
-  background-color: var(--hero-bg-color);
-  background-image: url('../images/bg-hero-winter.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   text-align: center;
-  color: var(--hero-heading-color);
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: var(--hero-overlay-opacity);
-    background-color: var(--hero-bg-color);
-  }
 }
 
 .header__inner {
@@ -207,9 +190,13 @@ p {
   }
 }
 
-.logo--minimal > a {
+.logo--minimal {
+  color: var(--text-color);
   font-size: 1.8rem;
-  color: $white;
+
+  &:visited {
+    color: var(--text-color);
+  }
 
   &:hover,
   &:focus {
@@ -236,11 +223,7 @@ p {
 
 .theme-icon {
   display: none;
-  fill: var(--hero-heading-color);
-
-  .header-minimal & {
-    fill: $white;
-  }
+  fill: var(--text-color);
 }
 
 .theme-icon--winter {
@@ -268,8 +251,7 @@ p {
 
 .header-minimal {
   padding: $half-unit 0;
-  background-color: var(--minimal-header-bg);
-  border-top: 4px solid var(--minimal-header-accent);
+  border-top: 0.2rem solid var(--minimal-header-accent);
 
   .header__inner {
     display: flex;
@@ -310,10 +292,10 @@ p {
 
 .section {
   padding: $base-unit*2 0;
-}
 
-.section--alt-bg {
-  background-color: var(--section-alt-bg-color);
+  @include breakpoint(large-fry) {
+    padding: $base-unit*3 0;
+  }
 }
 
 .section-header {
@@ -328,9 +310,9 @@ p {
     width: 100%;
     top: 50%;
     left: 0;
-    height: 1px;
-    border-top: 4px solid var(--heading-accent-color  );
-    margin-top: -4px;
+    height: 0;
+    border-top: 0.2rem solid var(--heading-accent-color  );
+    margin-top: -0.2rem;
     z-index: 1;
   }
 }
@@ -341,10 +323,6 @@ p {
   background: var(--default-bg-color);
   z-index: 2;
   padding: 0 $base-unit;
-
-  .section--alt-bg & {
-    background-color: var(--section-alt-bg-color);
-  }
 }
 
 
@@ -372,7 +350,7 @@ p {
 }
 
 .work-item__img {
-  border: 2px solid $grayLight;
+  border: 0.1rem solid $grayLight;
   margin-bottom: $half-unit;
 
   > img {
@@ -516,12 +494,6 @@ p {
 footer {
   padding: $base-unit 0;
   text-align: center;
-  color: white;
-  background-color: var(--footer-color);
-
-  a {
-    color: white;
-  }
 }
 
 

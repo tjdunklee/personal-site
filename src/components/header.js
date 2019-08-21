@@ -29,9 +29,7 @@ class Header extends React.Component {
       header = (
         <header className="header-minimal">
           <div className="wrap header__inner">
-            <div className="logo logo--minimal">
-              <Link to={'/'} className="logo logo--minimal">Tim <span>Dunklee</span></Link>
-            </div>
+            <Link to={'/'} className="logo logo--minimal">Tim <span>Dunklee</span></Link>
             <ThemeSwitcher toggleDarkMode={this.props.toggleDarkMode} darkMode={this.props.darkMode} />
           </div>
         </header>

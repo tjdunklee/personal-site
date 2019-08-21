@@ -5,7 +5,7 @@ import aboutPic from '../assets/images/tim-dunklee-with-son.png'
 class About extends React.Component {
   render() {
     return (
-      <section className="section section--alt-bg" id="about">
+      <section className="section" id="about">
         <div className="wrap">
           <div className="section-header">
             <h2 className="section-header__heading">About</h2>
