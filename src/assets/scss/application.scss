@@ -534,4 +534,7 @@ footer {
   SYNTAX HIGHLIGHTING
   ========================================================================== */
 
-@import "syntax-highlighting";
+.gatsby-highlight {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
