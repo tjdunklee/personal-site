@@ -45,7 +45,7 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/notes/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {

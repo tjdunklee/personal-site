@@ -7,7 +7,8 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const blogPost = path.resolve('./src/templates/blog-post.js');
+    const workPost = path.resolve('./src/templates/work-post.js');
     resolve(
       graphql(
         `
@@ -20,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    layout
                   }
                 }
               }
@@ -32,20 +34,15 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
+        // Create posts pages. They can be either Notes or Work depending on the layout frontmatter field.
         const posts = result.data.allMarkdownRemark.edges;
 
         _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-
           createPage({
-            path: 'notes' + post.node.fields.slug,
-            component: blogPost,
+            path: (post.node.frontmatter.layout === 'work' ? 'work' : 'notes') + post.node.fields.slug,
+            component: (post.node.frontmatter.layout === 'work' ? workPost : blogPost),
             context: {
               slug: post.node.fields.slug,
-              previous,
-              next,
             },
           })
         })

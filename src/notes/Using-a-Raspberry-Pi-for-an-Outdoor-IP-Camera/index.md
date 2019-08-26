@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Using a Raspberry Pi for an Outdoor IP Camera
 date: 2018-03-07 12:17:42
 tags:
