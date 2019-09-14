@@ -6,8 +6,8 @@ module.exports = {
     siteUrl: 'https://www.timdunklee.com',
   },
   plugins: [
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
@@ -23,6 +23,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/work`,
         name: 'work',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: 'images',
       },
     },
     {

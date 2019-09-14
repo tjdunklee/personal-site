@@ -8,8 +8,8 @@ $mainFont : 'Quattrocento', serif;
 
 
 //Base Units
-$base-unit : 1rem;
-$half-unit : 0.5rem;
+$base-unit : 1.25rem;
+$half-unit : 0.625rem;
 
 
 //Colors
@@ -52,11 +52,11 @@ $zindex-theme-switcher: 100;
 //Mixins and Stuff
 @mixin breakpoint($point) {
   @if $point == large-fry {
-    @media (min-width: 900px) { @content; }
+    @media (min-width: 56.25rem) { @content; } // 900px
   }
 
   @else if $point == small-fry {
-    @media (min-width: 600px)  { @content; }
+    @media (min-width: 37.5rem)  { @content; } // 600px
   }
 }
 
