@@ -132,13 +132,6 @@ p {
 
 
 /*==========================================================================
-  GRID
-  ========================================================================== */
-
-@import "grid";
-
-
-/*==========================================================================
   GENERAL LAYOUT
   ========================================================================== */
 
@@ -327,23 +320,17 @@ p {
   WORK
   ========================================================================== */
 
-.work-item {
-  margin: 0 auto $half-unit*3;
+.work-items {
+  display: grid;
+  grid-gap: $base-unit * 2;
 
-  &:nth-of-type(2n + 1) {
-    @include breakpoint(small-fry) {
-      clear: left;
-    }
-    @include breakpoint(large-fry) {
-      clear: none;
-    }
+  @include breakpoint(small-fry) {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  &:nth-of-type(3n + 1) {
-    @include breakpoint(large-fry) {
-      clear: left;
-    }
-  }
+.work-item__title {
+  margin-bottom: $half-unit/2;
 }
 
 .work-item__img {
@@ -360,13 +347,17 @@ p {
   ABOUT
   ========================================================================== */
 
-.about__headshot {
-  text-align: center;
-  margin-bottom: $base-unit*2;
+.about-grid {
+  display: grid;
+  grid-gap: $base-unit * 2;
 
   @include breakpoint(large-fry) {
-    margin-bottom: 0;
+    grid-template-columns: 1fr 2fr;
   }
+}
+
+.about__headshot {
+  text-align: center;
 }
 
 

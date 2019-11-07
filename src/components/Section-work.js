@@ -39,10 +39,10 @@ export default () => (
             <div className="section-header">
               <h2 className="section-header__heading">Work</h2>
             </div>
-            <div className="grid">
+            <div className="work-items">
 
               {workItems.map((item, index) => (
-                <div key={index} className="grid__item one-whole s-fry-one-half l-fry-one-third work-item">
+                <div key={index} className="work-item">
                   <div className="work-item__img">
                     <Img
                       fluid={item.node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -50,7 +50,7 @@ export default () => (
                     />
                   </div>
 
-                  <h3>{ item.node.frontmatter.title }</h3>
+                  <h3 class="work-item__title">{ item.node.frontmatter.title }</h3>
                   <Link className="work-item__cta" to={'/work' + item.node.fields.slug}>
                     See Details &rarr;
                   </Link>
