@@ -25,6 +25,10 @@ Whenever I take on a side project, I try and do it in a way that will expand my 
 Even though I bit off quite a bit, in the end I was very happy the way it turned out. Throughout the process I gained a large amount of empathy for the talented people I get to work with in this industry. Finally, I couldn't be happier to contribute something to the kiteboard community I love. 
 
 
-![The homepage of Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-thumbnail-12.png)
+![The homepage of Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-homepage.png)
 
-![The custom cards built for the Gutenberg editor.](../assets/images/work/kiteboardminnesota-cards.png)
+![The map of kiteboard locations at Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-map.png)
+
+![An example of the user experience at Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-cards.png)
+
+![An example of the gutenberg experience at Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-gutenberg.png)

@@ -9,16 +9,20 @@ what_i_did:
 tools:
   - Shopify
   - Slate
+  - Accentuate Custom Fields
 live_link: "https://epicprovisions.com"
 one_liner: "Leveraging Shopify for a complete B2B and B2C solution."
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At lectus urna duis convallis convallis tellus id. Dolor sit amet consectetur adipiscing elit. Scelerisque in dictum non consectetur a erat. Tincidunt dui ut ornare lectus sit amet est placerat in. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa. Eget nunc lobortis mattis aliquam faucibus purus in. Molestie at elementum eu facilisis sed. A cras semper auctor neque vitae. Donec pretium vulputate sapien nec sagittis. Ut sem nulla pharetra diam sit amet nisl suscipit.
+EPIC Provisions came to our team looking originally to just add a new product line to their current website. After some investigation, we quickly found out there were actually two websites that powered the EPIC experience online. There was one homegrown CMS site handling the majority of the site content, and then a Shopify site for the store functionality. After taking inventory of their content, we determined it would best to house all of their content and shopping experience within the confines of Shopify. We started down the journey of a custom theme built on top of the Slate framework and leveraging Accentuate Custom Fields to improve the authoring experience.
 
-Ultrices dui sapien eget mi proin sed libero enim sed. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Non consectetur a erat nam. Etiam dignissim diam quis enim lobortis scelerisque. In dictum non consectetur a erat nam at lectus. Nisi lacus sed viverra tellus in hac. Eget nullam non nisi est sit. Euismod lacinia at quis risus sed vulputate odio. Tellus in hac habitasse platea dictumst vestibulum rhoncus. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Nulla facilisi etiam dignissim diam quis enim. Urna id volutpat lacus laoreet non curabitur gravida arcu. Viverra mauris in aliquam sem. Molestie nunc non blandit massa enim nec dui nunc.
+While building out a new theme for EPIC, we quickly realized that we had a new challenge. The old website was handling not just regular sales to consumers, but also the wholesale portion of their business. After some quick research, we actually determined the recently released wholesale channel offered by Shopify would fit their needs well. This turned out to be a great solution because it offered functionality that would be tough to recreate using the normal Shopify direct to consumer model.
 
-Commodo sed egestas egestas fringilla phasellus faucibus. Porttitor massa id neque aliquam vestibulum. Dictumst vestibulum rhoncus est pellentesque elit. Nulla aliquet enim tortor at. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Aliquet eget sit amet tellus cras adipiscing. Nec ultrices dui sapien eget mi proin. At tempor commodo ullamcorper a lacus. Tempus urna et pharetra pharetra massa. Euismod elementum nisi quis eleifend quam. Facilisi etiam dignissim diam quis enim lobortis scelerisque. At tempor commodo ullamcorper a lacus vestibulum.
+Overall, we were extremely happy with our decision to leverage Shopify for a complete website overhaul. The EPIC team was thrilled with the results and how quickly they could now activate new products and campaigns.
 
+![The homepage of EPIC Provisions on a large screen.](../assets/images/work/epicprovisions-homepage.png)
 
-![The homepage of Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-thumbnail-12.png)
+![The product detail page of EPIC Provisions on a large screen.](../assets/images/work/epicprovisions-pdp.png)
+
+![The wholesale page of EPIC Provisions on a large screen.](../assets/images/work/epicprovisions-wholesale.png)
