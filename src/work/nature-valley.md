@@ -28,3 +28,7 @@ The solution I chose to use is WordPress Multisite. I always knew that Multisite
 The build went even quicker than I had anticipated. It was almost exactly like building out a normal WordPress theme, I just had to learn a few new functions. That being said, as we started to roll out all the different sites, a few things set me back. The first thing that gave me quite the scare, was when I ran into a language that was read right-to-left. Luckily, I found a very handy node package called [RTLCSS](https://rtlcss.com/) that could convert my SCSS to handle it. The second thing that I ran into, was a country (Belgium) that had two different native languages. I spun on this for a little while until I remembered that a plugin on Multisite could still be installed on a individual site. After remembering that feature, I quickly installed WPML which solved my problems. In the end, all 22 countries were authored in the Multisite with relative ease. I will definitely lean on Multisite again in the future!
 
 ![The homepage of Nature Valley Belgium on a large screen.](../assets/images/work/naturevalley-homepage.png)
+
+![A recipe detail page of Nature Valley UK on a large screen.](../assets/images/work/naturevalley-recipe.png)
+
+![The homepage of Nature Valley Israel on a large screen.](../assets/images/work/naturevalley-homepage-israel.png)
