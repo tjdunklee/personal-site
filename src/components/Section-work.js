@@ -50,7 +50,7 @@ export default () => (
                     />
                   </div>
 
-                  <h3 class="work-item__title">{ item.node.frontmatter.title }</h3>
+                  <h3 className="work-item__title">{ item.node.frontmatter.title }</h3>
                   <Link className="work-item__cta" to={'/work' + item.node.fields.slug}>
                     See Details &rarr;
                   </Link>

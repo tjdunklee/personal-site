@@ -45,7 +45,7 @@ class WorkPostTemplate extends React.Component {
 
               <div className="post__details-section">
                 <h2 className="h5 post__details-heading">Link</h2>
-                <a className="post__details-link" href={post.frontmatter.live_link}>Visit Website &rarr;</a>
+                <a className="post__details-link" href={post.frontmatter.live_link} rel="noreferrer">Visit Website &rarr;</a>
               </div>
 
             </div>

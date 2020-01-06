@@ -531,10 +531,6 @@ footer {
   HELPERS
   ========================================================================== */
 
-.clearfix {
-  @include clearfix();
-}
-
 // Hiding w/o display:none; for accessibility
 .visuallyhidden {
   border: 0;

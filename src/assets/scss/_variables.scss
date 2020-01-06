@@ -59,15 +59,3 @@ $zindex-theme-switcher: 100;
     @media (min-width: 37.5rem)  { @content; } // 600px
   }
 }
-
-@mixin clearfix() {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-  }
-  &:after {
-    clear: both;
-  }
-}
