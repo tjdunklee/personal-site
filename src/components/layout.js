@@ -65,7 +65,7 @@ class Template extends React.Component {
       <footer>
         <div className="wrap">
           <p>
-            Made by Tim with a <a href="https://www.flickr.com/photos/timdunklee/6894884410/">large dog</a> on his&nbsp;lap. &copy;2019
+            Made by Tim with a <a href="https://www.flickr.com/photos/timdunklee/6894884410/">large dog</a> on his&nbsp;lap. &copy;2020
           </p>
         </div>
       </footer>
