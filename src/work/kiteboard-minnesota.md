@@ -31,4 +31,4 @@ Even though I bit off quite a bit, in the end I was very happy the way it turned
 
 ![An example of the user experience at Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-cards.png)
 
-![An example of the gutenberg experience at Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-gutenberg.png)
+![An example of the gutenberg experience at Kiteboard Minnesota on a large screen.](../assets/images/work/kiteboardminnesota-gutenberg-block.png)
