@@ -16,7 +16,7 @@ one_liner: "Using WordPress Multisite to serve 22 brand sites"
 
 ---
 
-When I was initially asked to build out twenty-two different sites for Nature Valley in Europe, I thought to myself, "There has to be a better way." Building out that many different sites in WordPress would create a maintenance nightmare for everybody involved. Not only would you need to keep you custom theme up-to-date, you would also be constantly updating any plugins you chose to use. After some research, I was happy to find a solution.
+When I was initially asked to build out twenty-two different sites for Nature Valley in Europe, I thought to myself, "There has to be a better way." Building out that many different sites in WordPress would create a maintenance nightmare for everybody involved. Not only would you need to keep your custom theme up-to-date, you would also be constantly updating any plugins you chose to use. After some research, I was happy to find a solution.
 
 The solution I chose to use is WordPress Multisite. I always knew that Multisite existed, but I never quite understood when I would use it. All that changed though when I started to see if it would fit my requirements for the Nature Valley Europe build. The following features made the decision easy to go with Multisite:
 
