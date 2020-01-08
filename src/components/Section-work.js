@@ -19,8 +19,8 @@ export default () => (
                 title
                 thumbnail {
                   childImageSharp {
-                    fluid(maxWidth: 600) {
-                      ...GatsbyImageSharpFluid
+                    fluid(maxWidth: 600, webpQuality: 90) {
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }
