@@ -2,8 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import workLSI from '../assets/images/work-lsi.jpg'
-
 export default () => (
   <StaticQuery
     query={graphql`
