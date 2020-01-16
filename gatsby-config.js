@@ -56,6 +56,14 @@ module.exports = {
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-smartypants',
+          {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+              rule: {
+                include: /\.inline\.svg$/
+              }
+            }
+          },
         ],
       },
     },
