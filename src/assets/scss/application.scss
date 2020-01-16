@@ -357,7 +357,8 @@ p {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto-fit, 4rem);
   grid-auto-rows: 4rem;
-  grid-gap: $base-unit;
+  grid-column-gap: $base-unit;
+  grid-row-gap: $base-unit * 1.5;
   max-width: 50rem;
   margin: 0 auto;
   list-style: none;
