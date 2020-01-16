@@ -2,7 +2,10 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import workLSI from '../assets/images/work-lsi.jpg'
+import LogoLSI from '../assets/images/client-logos/client-logo-lsi.inline.svg'
+import LogoBWW from '../assets/images/client-logos/client-logo-bww.inline.svg'
+import LogoNike from '../assets/images/client-logos/client-logo-nike.inline.svg'
+import LogoCambria from '../assets/images/client-logos/client-logo-cambria.inline.svg'
 
 export default () => (
   <StaticQuery
@@ -57,6 +60,23 @@ export default () => (
                 </div>
               ))}
 
+            </div>
+            <div className="work-logos">
+              <h3 className="work-logos__heading">Previous Clients</h3>
+              <ul className="work-logos__grid">
+                <li className="work-logos__grid-item">
+                  <LogoLSI/>
+                </li>
+                <li className="work-logos__grid-item">
+                  <LogoBWW/>
+                </li>
+                <li className="work-logos__grid-item">
+                  <LogoNike/>
+                </li>
+                <li className="work-logos__grid-item">
+                  <LogoCambria/>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
