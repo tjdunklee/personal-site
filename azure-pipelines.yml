@@ -19,4 +19,4 @@ steps:
   inputs:
     targetType: 'inline'
     script:
-      git push https://$(VSTSToken)@dev.azure.com/GeneralMills/BoxTops/_git/TestRepostiory -u --all
+      git push https://$(VSTSToken)@dev.azure.com/GeneralMills/BoxTops/_git/TestRepository -u --all
