@@ -15,10 +15,8 @@ steps:
     targetType: 'inline'
     script: |
       git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
-      displayName: 'Get latest Github Changes to all branches'
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script:
       git push https://GeneralMills@dev.azure.com/GeneralMills/BoxTops/_git/BoxTopsAPISpec -u --all
-      displayName:'Push lates Github Changes to Master'
