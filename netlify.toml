@@ -1,3 +1,0 @@
-[context.branch-deploy]
-  command = "gatsby build"
-  publish = "public"
