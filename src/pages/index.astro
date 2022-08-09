@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const notes = await Astro.glob('./notes/**/*.md');
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Tim Dunklee - Front End Web Developer - Minneapolis MN" isHome={true}>
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
@@ -31,6 +33,10 @@ import Card from '../components/Card.astro';
 				title="Chat"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
+		</ul>
+
+		<ul>
+			{notes.map(note => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}
 		</ul>
 	</main>
 </Layout>
