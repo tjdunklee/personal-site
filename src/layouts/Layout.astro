@@ -7,8 +7,6 @@ export interface Props {
 let { title }    = Astro.props.content || Astro.props;
 const { isHome } = Astro.props as Props;
 
-console.log(Astro.props.content);
-
 if ( !isHome ) {
 	title = `${title} | Tim Dunklee`;
 }

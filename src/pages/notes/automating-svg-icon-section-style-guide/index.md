@@ -1,8 +1,9 @@
 ---
 layout: ../../../layouts/Layout.astro
 title: 'Automating the SVG Icon Section of a Style Guide'
-date: 2016-07-26
+date: '2016-07-26 12:17:42'
 ---
+
 
 Anybody that has ever worked with me knows that I am a big fan of having a solid icon system for any site build. After reading several articles touting the [benefits of an SVG icon system](https://css-tricks.com/icon-fonts-vs-svg/), I made the jump over a year ago and I couldn't be happier. There are [many different ways](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/) of creating and using SVG sprites, but I'm sold on the gulp-based inline SVG sprites. They provide the browser support, CSS styling possibilities, and infinite scaling to make almost any project successful.
 
@@ -65,6 +66,6 @@ I'm not going to waste your time here, but don't forget to add a default size fo
 ## 5. Profit.
 Load up that style guide and bask in your glory!
 
-![Example of SVG Icon Section](2016-automating-svg-icon-section.png)
+![Example of SVG Icon Section](/images/notes/2016-automating-svg-icon-section.png)
 
 Now every time you add a new SVG file in your icons directory, it will show up in the style guide. Magic!

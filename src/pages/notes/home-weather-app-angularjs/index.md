@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/Layout.astro
 title: "Building a Home Weather App using AngularJS"
-date: 2016-01-04
+date: '2016-01-04 12:17:42'
 ---
 Living in Minnesota, you become very dependent on weather apps to help you survive the unpredictable conditions. I always found myself studying ['Dark Sky'](http://darkskyapp.com/) to make an informed decision about what to put on my son before we headed out for the day. It seemed like a waste of time to always be pulling out my phone and sifting through all of the available weather data, especially if I was trying to do this while carrying a crying toddler. After pondering this problem for a while, I decided to make a solution for my family and learn something in the process.
 
@@ -10,9 +10,9 @@ After some research, I came to the conclusion that AngularJS would work quite we
 ## Up and Running
 I'm no product designer, but I was very happy with the simplicity of my design for the application. I chose to use very simple colors and icons to represent an hourly forecast for the day. The application runs day and night in our kitchen and it has proven to be very helpful in our daily lives!
 
-![DunkStation Runnning](2016-weather-app-running.jpg)
+![DunkStation Runnning](/images/notes/2016-weather-app-running.jpg)
 
-![Raspberry Pi for Apache](2016-weather-app-raspberry-pi.jpg)
+![Raspberry Pi for Apache](/images/notes/2016-weather-app-raspberry-pi.jpg)
 
 ## Next Steps
 The plan is to keep making this better and help organize our lives. I called it the "DunkStation" because I have bigger plans for it. The next thing on the agenda is getting our recipes stored for easy access. I'm planning on storing these in a Wordpress detached back-end and use the WP REST API to access this info using AngularJS. I'll update when that is complete!

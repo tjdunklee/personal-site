@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/Layout.astro
 title: 'A Huge Thank You to the Design and Development Community'
-date: 2017-01-01
+date: '2017-01-01 12:17:42'
 ---
 
 As a new year starts, I always like to look back. Throughout the last half-decade of my life there have been plenty of changes and challenges to reflect upon. The more I thought about past experiences, the more I realized how much my life has been changed by the design and development community I am involved in. I think it owe that community an overdue thank you.

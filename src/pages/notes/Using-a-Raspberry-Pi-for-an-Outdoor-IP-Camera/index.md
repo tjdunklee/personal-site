@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/Layout.astro
 title: 'Using a Raspberry Pi for an Outdoor IP Camera'
-date: 2018-03-07 12:17:42
+date: '2018-03-07 12:17:42'
 tags:
 ---
 Being a kiteboarder, I'm always curious what the weather is doing in other local kiteboarding locations. The plethora of weather apps on my phone can only tell me so much, so I was determined to find a way to get a view into the current conditions from the comfort of my home or office. On top of that, I was hoping I could come up with a way to share this view with other kiteboarders in the area.
@@ -39,17 +39,17 @@ The other problem I ran into was how to mount the camera to the front of the box
 ## The Results
 With the build behind me, I was excited to try this beast out. The location picked for it to live was our family cabin in Central Minnnesota which just so happens to be at popular kiteboarding location. What a coincidence! All it took was a few screws, some quick alignment, and plugging it in to get up and running. Within minutes, I could access a recent photo on my server from anywhere in the world. Success!
 
-![Webcam using PiCamera](2018-webcam-full.jpg)
+![Webcam using PiCamera](/images/notes/2018-webcam-full.jpg)
 
-![Webcam using PiCamera - Front of Enclosure](2018-webcam-front.jpg)
+![Webcam using PiCamera - Front of Enclosure](/images/notes/2018-webcam-front.jpg)
 
-![Webcam using PiCamera - Inside of Enclosure](2018-webcam-open.jpg)
+![Webcam using PiCamera - Inside of Enclosure](/images/notes/2018-webcam-open.jpg)
 
-![Webcam using PiCamera - Cable Gland](2018-webcam-cable-gland.jpg)
+![Webcam using PiCamera - Cable Gland](/images/notes/2018-webcam-cable-gland.jpg)
 
-![Webcam using PiCamera - Camera Mount](2018-webcam-picamera-mounting.jpg)
+![Webcam using PiCamera - Camera Mount](/images/notes/2018-webcam-picamera-mounting.jpg)
 
-![Webcam using PiCamera - Example Capture](2018-webcam-example-capture.jpg)
+![Webcam using PiCamera - Example Capture](/images/notes/2018-webcam-example-capture.jpg)
 
 ## Questions?
 If you are building out a similar project and have questions for me at all, feel free to contact me below. I always love to help!
