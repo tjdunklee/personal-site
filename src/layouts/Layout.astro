@@ -1,4 +1,5 @@
 ---
+import '../styles/global.scss';
 import Header from "../components/header/Header.astro";
 
 export interface Props {
@@ -12,33 +13,7 @@ const { isHome } = Astro.props as Props;
 if ( !isHome ) {
 	title = `${title} | Tim Dunklee`;
 }
-
 ---
-
-<style lang="scss">
-	@import '../styles/normalize';
-	@import '../styles/vars';
-
-	:global(*, *:after, *:before) {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-	:global(img) {
-		max-width: 100%;
-		height: auto !important;
-	}
-
-	:global(svg) {
-		vertical-align: middle;
-	}
-
-	html {
-		color: $color-white;
-		background-color: $color-black;
-	}
-</style>
 
 <!DOCTYPE html>
 <html lang="en">

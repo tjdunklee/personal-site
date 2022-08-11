@@ -1,0 +1,88 @@
+@import '_normalize.css';
+@import '_vars';
+
+/*==========================================================================
+  GLOBALS
+  ========================================================================== */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/*==========================================================================
+  TYPOGRAPHY
+  ========================================================================== */
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-family: $mainFont;
+  color: $color-white;
+  background-color: $color-black;
+
+  @media screen and (min-width: $mq-m) {
+    font-size: 1.25rem;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: $strongFont;
+}
+
+h1, .h1 {
+  font-size: 3.75rem; // 60px
+}
+h2, .h2 {
+  font-size: 3rem; // 48px
+}
+h3, .h3 {
+  font-size: 2.25rem; // 36px
+}
+h4, .h4 {
+  font-size: 1.5rem; // 24px
+}
+h5, .h5 {
+  font-size: 1.25rem; // 20px
+}
+.h6 {
+  font-size: 1rem; // 16px
+}
+
+a, a:visited {
+  color: $color-white;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p a {
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: $spacing-xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
