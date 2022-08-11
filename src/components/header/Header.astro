@@ -1,0 +1,43 @@
+---
+import logo from './logo-tim-dunklee.svg';
+
+export interface Props {
+	isHome?: boolean;
+}
+
+const { isHome } = Astro.props;
+
+---
+
+<header class={isHome ? "header" : "header-minimal"}>
+  {isHome &&
+    <h1 class="heading"><img src={logo} alt="Tim Dunklee" /></h1>
+  }
+  {!isHome &&
+    <a href="/"><img src={logo} alt="Site Homepage" /></div></a>
+  }
+</header>
+
+<style lang="scss">
+  @import '../../styles/vars';
+
+  .header {
+    padding: $spacing-xl $spacing-l calc($spacing-xxl * 4);
+    background-color: $color-white;
+    text-align: center;
+    background-image: url('./mountains.svg');
+    background-repeat: repeat-x;
+    background-position: bottom -2px center;
+
+    @media screen and (min-width: 48rem) {
+      padding-top: $spacing-xxl;
+      padding-bottom: calc( $spacing-xxl * 5);
+    }
+  }
+
+
+  .heading {
+    margin: 0;
+  }
+
+</style>

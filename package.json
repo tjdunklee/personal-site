@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.0.0-rc.8"
+    "astro": "^1.0.0-rc.8",
+    "sass": "^1.54.4"
   },
   "dependencies": {
     "date-fns": "^2.29.1"
