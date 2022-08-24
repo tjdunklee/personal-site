@@ -7,7 +7,7 @@ Recently I ran into an issue building out the navigation for a custom Shopify th
 
 After all the internal debate was over in my head, it was time to figure out a solution. A quick search revealed an [official Shopify article](https://help.shopify.com/en/themes/customization/navigation/open-external-links-in-new-browser) documenting a possible solve. Although, to me it seemed like resorting to JavaScript for this was a bit heavy handed. Instead I turned to liquid templating and figured out I could basically do the same thing without the extra weight of the client-side JavaScript. Here is what I came up with.
 
-```
+``` liquid
 {% assign externalLink = false %}
 
 {% if link.url contains 'https' or link.url contains 'http' %}

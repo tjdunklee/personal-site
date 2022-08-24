@@ -1,6 +1,9 @@
 ---
 import Layout from "./Layout.astro";
+import {format, parse} from 'date-fns';
+
 const {frontmatter} = Astro.props;
+const date = new Date(frontmatter.date);
 ---
 
 <Layout title={frontmatter.title}>
@@ -9,7 +12,7 @@ const {frontmatter} = Astro.props;
 
       <header class="post__header">
         <h1 class="h2 post__title">{frontmatter.title}</h1>
-        <p class="post__meta">January 04, 2016</p>
+        <p class="post__meta">{format(date, 'MMMM do, yyyy')}</p>
       </header>
   
       <div class="post__content">
