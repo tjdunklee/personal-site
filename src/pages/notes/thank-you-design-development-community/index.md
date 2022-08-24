@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: 'A Huge Thank You to the Design and Development Community'
 date: '2017-01-01 12:17:42'
 ---

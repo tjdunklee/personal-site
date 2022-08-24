@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: "Building a Home Weather App using AngularJS"
 date: '2016-01-04 12:17:42'
 ---

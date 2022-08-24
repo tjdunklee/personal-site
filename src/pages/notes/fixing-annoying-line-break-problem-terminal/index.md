@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: "Fixing My Line Wrap Issue in iTerm 2"
 date: '2015-12-14 12:17:42'
 ---

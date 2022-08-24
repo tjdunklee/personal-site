@@ -13,22 +13,20 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 ---
 
 <Layout title="Tim Dunklee - Front End Web Developer - Minneapolis MN" isHome={true}>
-	<main>
 
-		<ul>
-			{nonDraftNotes.map(note => {
-				const date = new Date(note.frontmatter.date);
+	<ul>
+		{nonDraftNotes.map(note => {
+			const date = new Date(note.frontmatter.date);
 
-				return (
-					<li>
-						<div>{format(date, 'MMMM do, yyyy')}</div>
-						<a href={note.url}>{note.frontmatter.title}</a>
-					</li>
-					)
-			})}
-		</ul>
+			return (
+				<li>
+					<div>{format(date, 'MMMM do, yyyy')}</div>
+					<a href={note.url}>{note.frontmatter.title}</a>
+				</li>
+				)
+		})}
+	</ul>
 
-	</main>
 </Layout>
 
 <style>

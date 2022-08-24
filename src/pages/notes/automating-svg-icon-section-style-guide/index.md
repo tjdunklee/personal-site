@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: 'Automating the SVG Icon Section of a Style Guide'
 date: '2016-07-26 12:17:42'
 ---

@@ -98,6 +98,10 @@ p {
   padding-right: $spacing-l;
 }
 
+.wrap--narrow {
+  max-width: 50rem;
+}
+
 /*==========================================================================
   HELPERS
   ========================================================================== */
@@ -112,4 +116,95 @@ p {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+/*==========================================================================
+  POSTS
+  - handles both notes and also work details
+========================================================================== */
+
+.post {
+  padding: $spacing-xl*3 0;
+}
+
+.post__header {
+  margin-bottom: $spacing-xl;
+}
+
+.post__title {
+  margin-bottom: $spacing;
+}
+
+.post__callout {
+  font-size: 1.5rem;
+
+  @media screen and (min-width: $mq-m) {
+    font-size: 1.8rem;
+  }
+}
+
+.post__meta {
+  text-transform: uppercase;
+  font-family: $strongFont;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.post__details {
+  margin-bottom: $spacing-xl * 2;
+  margin-top: $spacing-xl * 2;
+
+  @media screen and (min-width: $mq-m) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.post__details-section {
+  & + & {
+    margin-top: $spacing-xl;
+
+    @media screen and (min-width: $mq-m) {
+      margin-top: 0;
+    }
+  }
+}
+
+.post__details-heading {
+  margin-bottom: $spacing;
+}
+
+.post__details-list {
+  list-style: none;
+  font-size: 1rem;
+}
+
+.post__details-link {
+  display: block;
+  font-size: 1rem;
+}
+
+.post__content {
+  h1, h2, h3, h4, h5 {
+    margin-top: $spacing-xl * 2;
+    margin-bottom: $spacing;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1rem; }
+
+  ul, ol {
+    margin-left: $spacing-xl;
+    margin-bottom: $spacing-xl;
+    font-size: 0.9em;
+  }
+
+  li + li {
+    margin-top: $spacing * 0.5;
+  }
 }

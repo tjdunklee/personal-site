@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: 'How to Make Shopify External Links Open in a New Window'
 date: '2019-02-12 12:17:42'
 ---

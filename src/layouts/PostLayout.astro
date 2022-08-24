@@ -1,0 +1,21 @@
+---
+import Layout from "./Layout.astro";
+const {frontmatter} = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="post">
+    <div class="wrap wrap--narrow">
+
+      <header class="post__header">
+        <h1 class="h2 post__title">{frontmatter.title}</h1>
+        <p class="post__meta">January 04, 2016</p>
+      </header>
+  
+      <div class="post__content">
+        <slot />
+      </div>
+
+    </div>
+  </article>
+</Layout>
