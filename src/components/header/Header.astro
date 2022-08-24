@@ -1,5 +1,6 @@
 ---
 import logo from './logo-tim-dunklee.svg';
+import logoLight from './logo-tim-dunklee-light.svg';
 
 export interface Props {
 	isHome?: boolean;
@@ -9,12 +10,12 @@ const { isHome } = Astro.props;
 
 ---
 
-<header class={isHome ? "header" : "header-minimal"}>
+<header class={isHome ? "header" : "header header-minimal"}>
   {isHome &&
     <h1 class="heading"><img src={logo} alt="Tim Dunklee" /></h1>
   }
   {!isHome &&
-    <a href="/"><img src={logo} alt="Site Homepage" /></div></a>
+    <a href="/" class="home-anchor"><img class="logo" src={logo} alt="Site Homepage" /></a>
   }
 </header>
 
@@ -22,22 +23,32 @@ const { isHome } = Astro.props;
   @import '../../styles/vars';
 
   .header {
-    padding: $spacing-xl $spacing-l calc($spacing-xxl * 4);
+    padding: $spacing-xl $spacing-l ($spacing-xxl * 4);
     background-color: $color-white;
     text-align: center;
     background-image: url('./mountains.svg');
     background-repeat: repeat-x;
     background-position: bottom -2px center;
 
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: $mq-m) {
       padding-top: $spacing-xxl;
-      padding-bottom: calc( $spacing-xxl * 5);
+      padding-bottom: ($spacing-xxl * 5);
     }
   }
 
+  .header-minimal {
+    padding-top: $spacing-l;
+    padding-bottom: $spacing-xxl;
+    background-size: 20rem;
+  }
 
   .heading {
     margin: 0;
+  }
+
+  .home-anchor {
+    display: inline-block;
+    max-width: 10rem;
   }
 
 </style>
