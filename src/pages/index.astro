@@ -1,8 +1,10 @@
 ---
 import {format, parse} from 'date-fns';
 import Layout from '../layouts/Layout.astro';
-import trail from '../components/trail-1.svg';
-import trail2 from '../components/trail-2.svg';
+import trail from '../assets/trail-1.svg';
+import trail2 from '../assets/trail-2.svg';
+import trail3 from '../assets/trail-3.svg';
+import timTRex from '../assets/tim-t-rex-developer.jpeg';
 
 // Pull all notes, sort them by date, and exclude all drafts
 const unsortedNotes = await Astro.glob('./notes/**/*.md');
@@ -49,6 +51,23 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 				<img src={trail2} alt="" />
 			</div>
 		</section>
+
+		<section class="section">
+			<div class="section__intro">
+				<header>
+					<h2 class="section__heading">About</h2>
+					<p class="h5 section__subheading">Nice to meet you.</p>
+				</header>
+				<p>I am a senior front end web developer in Minneapolis, Minnesota. I love the ever-changing industry I work in and never stop thinking about it even though my wife thinks I'm slightly obsessed. I'm currently obsessing over CSS Grid, accessibility, and the JAMstack.</p>
+				<p>In my spare time I like to spend as much time outdoors as possible and snap some photos while I'm at it.</p>
+			</div>
+			<div class="section__content">
+				<img src={timTRex} alt="T Rex siting at a computer desk" />
+			</div>
+			<div class="section__trail" aria-hidden="true">
+				<img src={trail3} alt="" />
+			</div>
+		</section>
 	
 		<ul>
 			{nonDraftNotes.map(note => {
@@ -81,8 +100,10 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 		padding-top: $spacing;
 	}
 
-	.section--indented {
-		padding-left: $spacing-xxl * 2;
+	.section__intro {
+		.section--indented & {
+			padding-left: $spacing-xxl * 2;
+		}
 	}
 
 	.section__heading {
@@ -95,17 +116,19 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 
 	.section__content {
 		grid-row: span 2;
+		text-align: center;
 	}
 
 	.work-logos {
-		list-style: none;
-		margin: 0;
-		padding: 0;
 		display: grid;
+		max-width: 25rem;
+		margin: 0 auto;
+		padding: 0;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(auto-fit,5rem);
 		grid-auto-rows: 5rem;
 		grid-gap: $spacing-xxl;
+		list-style: none;
 	}
 
 	.work-logos__item svg {
