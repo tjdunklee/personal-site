@@ -60,10 +60,12 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
   font-weight: 700;
   line-height: 1.1;
   font-family: $strongFont;
+  text-transform: uppercase;
 }
 
 h1, .h1 {
@@ -123,6 +125,10 @@ p {
 }
 
 .wrap--narrow {
+  max-width: 62rem;
+}
+
+.wrap--narrower {
   max-width: 50rem;
 }
 
