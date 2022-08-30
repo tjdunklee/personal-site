@@ -25,9 +25,10 @@ const { isHome } = Astro.props;
     padding: $spacing-xl $spacing-l ($spacing-xxl * 4);
     background-color: $color-white;
     text-align: center;
-    background-image: url('./mountains.svg');
+    background-image: url('./mountain-bg.svg');
     background-repeat: repeat-x;
     background-position: bottom -2px center;
+    background-size: 25rem;
 
     @media screen and (min-width: $mq-m) {
       padding-top: $spacing-xxl;
@@ -38,7 +39,7 @@ const { isHome } = Astro.props;
   .header-minimal {
     padding-top: $spacing-l;
     padding-bottom: $spacing-xxl;
-    background-size: 20rem;
+    background-size: 10rem;
   }
 
   .heading {
