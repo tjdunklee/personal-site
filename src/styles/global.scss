@@ -1,0 +1,239 @@
+@import '_normalize.css';
+@import '_vars';
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quattrocento';
+  src: url('/fonts/quattrocento.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quattrocento';
+  src: url('/fonts/quattrocento-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*==========================================================================
+  GLOBALS
+  ========================================================================== */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/*==========================================================================
+  TYPOGRAPHY
+  ========================================================================== */
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-family: $mainFont;
+  color: $color-white;
+  background-color: $color-black;
+
+  @media screen and (min-width: $mq-m) {
+    font-size: 1.25rem;
+  }
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: $strongFont;
+}
+
+h1, .h1 {
+  font-size: 3.75rem; // 60px
+}
+h2, .h2 {
+  font-size: 3rem; // 48px
+}
+h3, .h3 {
+  font-size: 2.25rem; // 36px
+}
+h4, .h4 {
+  font-size: 1.5rem; // 24px
+}
+h5, .h5 {
+  font-size: 1.25rem; // 20px
+}
+.h6 {
+  font-size: 1rem; // 16px
+}
+
+a, a:visited {
+  color: $color-white;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p a {
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: $spacing-xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*==========================================================================
+  GENERAL LAYOUT
+  ========================================================================== */
+
+.wrap {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: $spacing-l;
+  padding-right: $spacing-l;
+}
+
+.wrap--narrow {
+  max-width: 62rem;
+}
+
+.wrap--narrower {
+  max-width: 50rem;
+}
+
+/*==========================================================================
+  HELPERS
+  ========================================================================== */
+
+// Hiding w/o display:none; for accessibility
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*==========================================================================
+  POSTS
+  - handles both notes and also work details
+========================================================================== */
+
+.post {
+  padding: $spacing-xl*3 0;
+}
+
+.post__header {
+  margin-bottom: $spacing-xl;
+}
+
+.post__title {
+  margin-bottom: $spacing;
+}
+
+.post__callout {
+  font-size: 1.5rem;
+
+  @media screen and (min-width: $mq-m) {
+    font-size: 1.8rem;
+  }
+}
+
+.post__meta {
+  text-transform: uppercase;
+  font-family: $strongFont;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.post__details {
+  margin-bottom: $spacing-xl * 2;
+  margin-top: $spacing-xl * 2;
+
+  @media screen and (min-width: $mq-m) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.post__details-section {
+  & + & {
+    margin-top: $spacing-xl;
+
+    @media screen and (min-width: $mq-m) {
+      margin-top: 0;
+    }
+  }
+}
+
+.post__details-heading {
+  margin-bottom: $spacing;
+}
+
+.post__details-list {
+  list-style: none;
+  font-size: 1rem;
+}
+
+.post__details-link {
+  display: block;
+  font-size: 1rem;
+}
+
+.post__content {
+  h1, h2, h3, h4, h5 {
+    margin-top: $spacing-xl * 2;
+    margin-bottom: $spacing;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1rem; }
+
+  ul, ol {
+    margin-left: $spacing-xl;
+    margin-bottom: $spacing-xl;
+    font-size: 0.9em;
+  }
+
+  li + li {
+    margin-top: $spacing * 0.5;
+  }
+}
