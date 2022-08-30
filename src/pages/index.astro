@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import trail from '../assets/trail-1.svg';
 import trail2 from '../assets/trail-2.svg';
 import trail3 from '../assets/trail-3.svg';
+import trail4 from '../assets/trail-4.svg';
 import timTRex from '../assets/tim-t-rex-developer.jpeg';
 
 // Pull all notes, sort them by date, and exclude all drafts
@@ -23,7 +24,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 			<img src={trail} alt="" />
 		</div>
 
-		<section class="section section--indented">
+		<section class="section section--split section--indented">
 			<div class="section__intro">
 				<header>
 					<h2 class="section__heading">Work</h2>
@@ -47,12 +48,12 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 					</li>
 				</ul>
 			</div>
-			<div class="section__trail" aria-hidden="true">
+			<div class="section__trail">
 				<img src={trail2} alt="" />
 			</div>
 		</section>
 
-		<section class="section">
+		<section class="section section--split">
 			<div class="section__intro">
 				<header>
 					<h2 class="section__heading">About</h2>
@@ -62,25 +63,46 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 				<p>In my spare time I like to spend as much time outdoors as possible and snap some photos while I'm at it.</p>
 			</div>
 			<div class="section__content">
-				<img src={timTRex} alt="T Rex siting at a computer desk" />
+				<div class="about-image">
+					<img src={timTRex} alt="T Rex siting at a computer desk" />
+				</div>
 			</div>
-			<div class="section__trail" aria-hidden="true">
+			<div class="section__trail">
 				<img src={trail3} alt="" />
 			</div>
 		</section>
-	
-		<ul>
-			{nonDraftNotes.map(note => {
-				const date = new Date(note.frontmatter.date);
-	
-				return (
-					<li>
-						<div>{format(date, 'MMMM do, yyyy')}</div>
-						<a href={note.url}>{note.frontmatter.title}</a>
-					</li>
-					)
-			})}
-		</ul>
+
+		<section class="section section--indented section--full-width">
+			<div class="section__intro">
+				<header>
+					<h2 class="section__heading">Notes</h2>
+					<p class="h5 section__subheading">Sharing is caring.</p>
+				</header>
+			</div>
+			<div class="section__content">
+				<ul class="notes-list">
+					{nonDraftNotes.map(note => {
+						const date = new Date(note.frontmatter.date);
+			
+						return (
+							<li class="notes-list__item">
+								<article class="note">
+									<span class="note__meta">{format(date, 'MMMM do, yyyy')}</span>
+									<h3 class="note__heading">
+										<a class="note__anchor" href={note.url}>{note.frontmatter.title}</a>
+									</h3>
+								</article>
+							</li>
+							)
+					})}
+				</ul>
+			</div>
+		</section>
+
+		<div class="last-trail">
+			<img src={trail4} alt="" />
+		</div>
+
 	</div>
 
 </Layout>
@@ -94,15 +116,24 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 
 	.section {
 		display: grid;
-		grid-template-columns: 2fr 3fr;
-		grid-template-rows: min-content 1fr;
-		grid-gap: $spacing-xl $spacing-xxl;
+		grid-gap: $spacing-xxl;
 		padding-top: $spacing;
+	}
+
+	.section--split {
+
+		@media screen and (min-width: $mq-m) {
+			grid-template-columns: 2fr 3fr;
+			grid-template-rows: min-content 1fr;
+			grid-gap: $spacing-xl $spacing-xxl;
+		}
 	}
 
 	.section__intro {
 		.section--indented & {
-			padding-left: $spacing-xxl * 2;
+			@media screen and (min-width: $mq-m) {
+				padding-left: $spacing-xxl * 2;
+			}
 		}
 	}
 
@@ -116,7 +147,12 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 
 	.section__content {
 		grid-row: span 2;
-		text-align: center;
+
+		.section--full-width & {
+			@media screen and (min-width: $mq-m) {
+				padding-left: $spacing-xxl * 2;
+			}
+		}
 	}
 
 	.work-logos {
@@ -137,5 +173,46 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 		height: 100%;
 		max-width: 100%;
 		max-height: 100%;
+	}
+
+	.about-image {
+
+		@media screen and (min-width: $mq-m) {
+			margin: 0 auto;
+			max-width: 25rem;
+		}
+	}
+
+	.notes-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.notes-list__item + .notes-list__item {
+		margin-top: $spacing-xxl;
+	}
+
+	.note__heading {
+		margin: 0;
+		text-transform: none;
+	}
+
+	.note__anchor {
+		text-decoration: underline;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration: none;
+		}
+	}
+
+	.note__meta {
+		font-size: 1rem;
+	}
+
+	.last-trail {
+		margin-top: $spacing-xxl;
+		text-align: center;
 	}
 </style>
