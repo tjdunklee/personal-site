@@ -2,6 +2,7 @@
 import {format, parse} from 'date-fns';
 import Layout from '../layouts/Layout.astro';
 import WorkLogos from '../components/work-logos/work-logos.astro';
+import AboutImages from '../components/about-images/about-images.astro';
 import trail from '../assets/trail-1.svg';
 import trail2 from '../assets/trail-2.svg';
 import trail3 from '../assets/trail-3.svg';
@@ -51,9 +52,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 				<p>In my spare time I like to spend as much time outdoors as possible and snap some photos while I'm at it.</p>
 			</div>
 			<div class="section__content">
-				<div class="about-image">
-					<img src={timTRex} alt="T Rex siting at a computer desk" />
-				</div>
+				<AboutImages />
 			</div>
 			<div class="section__trail">
 				<img src={trail3} alt="" />

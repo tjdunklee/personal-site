@@ -1,0 +1,60 @@
+---
+import timFamily from '../../assets/tim-family.jpeg';
+import timTRex from '../../assets/tim-t-rex-developer.jpeg';
+import timKiteboarding from '../../assets/tim-kiteboarding.jpeg';
+import timBiking from '../../assets/tim-mountain-bike.jpg';
+---
+
+<ul class="photo-list">
+  <li class="photo-list__item">
+    <img src={timFamily} alt="A family of three posting near a red wall." />
+  </li>
+  <li class="photo-list__item">
+    <img src={timTRex} alt="A person in a t-rex costume sitting at a computer desk" />
+  </li>
+  <li class="photo-list__item">
+    <img src={timKiteboarding} alt="A kiteboarder gliding across a frozen lake in Minnesota" />
+  </li>
+  <li class="photo-list__item">
+    <img src={timBiking} alt="A mountain biker resting on a bike in front of a mountain" />
+  </li>
+</ul>
+
+<style lang="scss">
+  @import '../../styles/vars';
+
+  $grid-offset: $spacing-xl * 2;
+
+  .photo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: $grid-offset 1fr $grid-offset;
+    grid-template-rows: $grid-offset 1fr $grid-offset;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+  }
+
+  .photo-list__item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    &:nth-child(odd) {
+      grid-column: 1/-2;
+      grid-row: 2/-1;
+    }
+
+    &:nth-child(even) {
+      grid-column: 2/-1;
+      grid-row: 1/-2;
+    }
+  }
+</style>
