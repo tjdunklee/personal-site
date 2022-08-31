@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import {format, parse} from 'date-fns';
+import trail4 from '../assets/trail-4.svg';
 
 const {frontmatter} = Astro.props;
 const date = new Date(frontmatter.date);
@@ -17,6 +18,10 @@ const date = new Date(frontmatter.date);
   
       <div class="post__content">
         <slot />
+      </div>
+
+      <div class="post__trail">
+        <img src={trail4} alt="" />
       </div>
 
     </div>
