@@ -11,7 +11,7 @@ const { isHome } = Astro.props;
 
 <header class={isHome ? "header" : "header header-minimal"}>
   {isHome &&
-    <h1 class="heading"><img src={logo} alt="Tim Dunklee" /></h1>
+    <h1 class="heading"><img src={logo} alt="Tim Dunklee" width="489" height="237" loading="lazy" /></h1>
   }
   {!isHome &&
     <a href="/" class="home-anchor"><img class="logo" src={logo} alt="Site Homepage" /></a>
@@ -22,7 +22,7 @@ const { isHome } = Astro.props;
   @import '../../styles/vars';
 
   .header {
-    padding: $spacing-xl $spacing-l ($spacing-xxl * 4);
+    padding: ($spacing-xxl * 2) $spacing-xl ($spacing-xxl * 5);
     background-color: $color-white;
     text-align: center;
     background-image: url('./mountain-bg.svg');
@@ -31,7 +31,6 @@ const { isHome } = Astro.props;
     background-size: 25rem;
 
     @media screen and (min-width: $mq-m) {
-      padding-top: $spacing-xxl;
       padding-bottom: ($spacing-xxl * 5);
     }
   }
