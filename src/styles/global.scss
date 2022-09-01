@@ -233,6 +233,10 @@ p {
   li + li {
     margin-top: $spacing * 0.5;
   }
+
+  pre {
+    padding: $spacing-l;
+  }
 }
 
 .post__trail {
