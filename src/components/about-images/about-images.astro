@@ -2,7 +2,7 @@
 import timFamily from '../../assets/tim-family.jpeg';
 import timTRex from '../../assets/tim-t-rex-developer.jpeg';
 import timKiteboarding from '../../assets/tim-kiteboarding.jpeg';
-import timBiking from '../../assets/tim-mountain-bike.jpg';
+import timBiking from '../../assets/tim-mountain-bike.jpeg';
 ---
 
 <section class="photo-grid" data-js="slideshow">
@@ -10,16 +10,16 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
   <div class="visuallyhidden" aria-live="polite" aria-atomic="true" data-js="slideshow-announcer"></div>
   <ul class="photo-list">
     <li class="photo-list__item is-current" data-js="slideshow-slide">
-      <img src={timFamily} alt="A family of three posting near a red wall." />
+      <img width="512" height="768" src={timFamily} loading="lazy" alt="A family of three posting near a red wall." />
     </li>
     <li class="photo-list__item" data-js="slideshow-slide" aria-hidden="true">
-      <img src={timTRex} alt="A person in a t-rex costume sitting at a computer desk" />
+      <img width="768" height="512" src={timTRex}loading="lazy" alt="A person in a t-rex costume sitting at a computer desk" />
     </li>
     <li class="photo-list__item" data-js="slideshow-slide" aria-hidden="true">
-      <img src={timKiteboarding} alt="A kiteboarder gliding across a frozen lake in Minnesota" />
+      <img width="768" height="512" src={timKiteboarding} loading="lazy" alt="A kiteboarder gliding across a frozen lake in Minnesota" />
     </li>
     <li class="photo-list__item" data-js="slideshow-slide" aria-hidden="true">
-      <img src={timBiking} alt="A mountain biker resting on a bike in front of a mountain" />
+      <img width="512" height="768" src={timBiking} loading="lazy" alt="A mountain biker resting on a bike in front of a mountain" />
     </li>
   </ul>
   <ul class="photo-grid__controls">
@@ -73,6 +73,7 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
       transform: translate(-50%, -50%);
       max-height: 100%;
       max-width: 100%;
+      object-fit: contain;
     }
 
     &.is-current {
