@@ -5,31 +5,32 @@ import timKiteboarding from '../../assets/tim-kiteboarding.jpeg';
 import timBiking from '../../assets/tim-mountain-bike.jpg';
 ---
 
-<section class="photo-grid" data-js="image-slideshow">
+<section class="photo-grid" data-js="slideshow">
   <h3 class="visuallyhidden">Slideshow of Photos</h3>
+  <div class="visuallyhidden" aria-live="polite" aria-atomic="true" data-js="slideshow-announcer"></div>
   <ul class="photo-list">
-    <li class="photo-list__item">
+    <li class="photo-list__item is-current" data-js="slideshow-slide">
       <img src={timFamily} alt="A family of three posting near a red wall." />
     </li>
-    <li class="photo-list__item">
+    <li class="photo-list__item" data-js="slideshow-slide" aria-hidden="true">
       <img src={timTRex} alt="A person in a t-rex costume sitting at a computer desk" />
     </li>
-    <li class="photo-list__item">
+    <li class="photo-list__item" data-js="slideshow-slide" aria-hidden="true">
       <img src={timKiteboarding} alt="A kiteboarder gliding across a frozen lake in Minnesota" />
     </li>
-    <li class="photo-list__item">
+    <li class="photo-list__item" data-js="slideshow-slide" aria-hidden="true">
       <img src={timBiking} alt="A mountain biker resting on a bike in front of a mountain" />
     </li>
   </ul>
   <ul class="photo-grid__controls">
     <li>
-      <button class="photo-grid__button-prev">
+      <button class="photo-grid__button-prev" data-js="slideshow-prev-btn">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
         <span class="visuallyhidden">Previous Photo</span>
       </button>
     </li>
     <li>
-      <button class="photo-grid__button-next">
+      <button class="photo-grid__button-next" data-js="slideshow-next-btn">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
         <span class="visuallyhidden">Next Photo</span>
       </button>
@@ -59,13 +60,20 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
   }
 
   .photo-list__item {
+    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
+    opacity: 0.5;
 
     img {
       max-height: 100%;
       max-width: 100%;
+    }
+
+    &.is-current {
+      z-index: $zIndexSlides;
+      opacity: 1;
     }
 
     &:nth-child(odd) {
@@ -80,6 +88,7 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
   }
 
   .photo-grid__controls {
+    position: relative;
     display: flex;
     position: absolute;
     bottom: $spacing-l;
@@ -88,6 +97,7 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
     margin: 0;
     padding: 0;
     gap: $spacing;
+    z-index: $zIndexSlideControls;
 
     @media screen and (min-width: $mq-s) {
       bottom: $grid-offset;
@@ -117,3 +127,69 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
     }
   }
 </style>
+
+<script>
+  ( () => {
+    const slideshow = document.querySelector('[data-js="slideshow"]');
+    const prevButton = document.querySelector('[data-js="slideshow-prev-btn"]');
+    const nextButton = document.querySelector('[data-js="slideshow-next-btn"]');
+    const slides = document.querySelectorAll('[data-js="slideshow-slide"]');
+    const announcer = document.querySelector('[data-js="slideshow-announcer"]');
+    let currentSlide = 1;
+
+    const init = () => {
+      if (slideshow) {
+        bindEvents();
+      }
+    }
+
+    const bindEvents = () => {
+      prevButton?.addEventListener('click', prevSlide );
+      nextButton?.addEventListener('click', nextSlide );
+    }
+
+    const prevSlide = () => {
+      currentSlide--;
+
+      if (currentSlide < 1) {
+        currentSlide = slides.length;
+      }
+
+      showSlide(currentSlide);
+    }
+
+    const nextSlide = () => {
+      currentSlide++;
+
+      if (currentSlide > slides.length) {
+        currentSlide = 1;
+      }
+
+      showSlide(currentSlide);
+    }
+
+    const showSlide = (slideNum: number) => {
+      slides.forEach((element, index) => {
+        const actualSlideNumber = index + 1; // make this non zero-based
+
+        if (actualSlideNumber === slideNum) {
+          element.classList.add('is-current');
+          element.removeAttribute('aria-hidden');
+        } else {
+          element.classList.remove('is-current');
+          element.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      announceSlide(slideNum);
+    }
+
+    const announceSlide = (slideNum: number) => {
+      if (announcer) {
+        announcer.textContent = (`Now showing photo ${slideNum} of ${slides.length}`)
+      }
+    }
+
+    return init();
+  } )();
+</script>
