@@ -112,7 +112,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 		@media screen and (min-width: $mq-m) {
 			grid-template-columns: 2fr 3fr;
 			grid-template-rows: min-content 1fr;
-			grid-gap: $spacing-xl $spacing-xxl;
+			grid-gap: $spacing-xl ($spacing-xxl * 2);
 		}
 	}
 
