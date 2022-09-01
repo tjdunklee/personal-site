@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import trail4 from '../assets/trail-4.svg';
 
 // Pull all notes, sort them by date, and exclude all drafts
 const unsortedNotes = await Astro.glob('./notes/**/*.md');
@@ -15,6 +16,9 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 	<div class="wrap four-oh-four">
 		<h1 class="four-oh-four__heading">404</h1>
 		<p class="four-oh-four__description">Sorry, whatever you are looking for isn't here anymore.</p>
+		<div class="four-oh-four__trail">
+			<img src={trail4} width="205" height="287" alt="" loading="lazy" />
+		</div>
 	</div>
 </Layout>
 
@@ -23,7 +27,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 
 	.four-oh-four {
 		padding-top: $spacing-xxl;
-		padding-bottom: $spacing-xxl * 3;
+		padding-bottom: $spacing-xxl * 2;
 		text-align: center;
 	}
 
