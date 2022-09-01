@@ -5,25 +5,46 @@ import timKiteboarding from '../../assets/tim-kiteboarding.jpeg';
 import timBiking from '../../assets/tim-mountain-bike.jpg';
 ---
 
-<ul class="photo-list">
-  <li class="photo-list__item">
-    <img src={timFamily} alt="A family of three posting near a red wall." />
-  </li>
-  <li class="photo-list__item">
-    <img src={timTRex} alt="A person in a t-rex costume sitting at a computer desk" />
-  </li>
-  <li class="photo-list__item">
-    <img src={timKiteboarding} alt="A kiteboarder gliding across a frozen lake in Minnesota" />
-  </li>
-  <li class="photo-list__item">
-    <img src={timBiking} alt="A mountain biker resting on a bike in front of a mountain" />
-  </li>
-</ul>
+<section class="photo-grid" data-js="image-slideshow">
+  <h3 class="visuallyhidden">Slideshow of Photos</h3>
+  <ul class="photo-list">
+    <li class="photo-list__item">
+      <img src={timFamily} alt="A family of three posting near a red wall." />
+    </li>
+    <li class="photo-list__item">
+      <img src={timTRex} alt="A person in a t-rex costume sitting at a computer desk" />
+    </li>
+    <li class="photo-list__item">
+      <img src={timKiteboarding} alt="A kiteboarder gliding across a frozen lake in Minnesota" />
+    </li>
+    <li class="photo-list__item">
+      <img src={timBiking} alt="A mountain biker resting on a bike in front of a mountain" />
+    </li>
+  </ul>
+  <ul class="photo-grid__controls">
+    <li>
+      <button class="photo-grid__button-prev">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        <span class="visuallyhidden">Previous Photo</span>
+      </button>
+    </li>
+    <li>
+      <button class="photo-grid__button-next">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        <span class="visuallyhidden">Next Photo</span>
+      </button>
+    </li>
+  </ul>
+</section>
 
 <style lang="scss">
   @import '../../styles/vars';
 
   $grid-offset: $spacing-xl * 2;
+
+  .photo-grid {
+    position: relative;
+  }
 
   .photo-list {
     list-style: none;
@@ -55,6 +76,44 @@ import timBiking from '../../assets/tim-mountain-bike.jpg';
     &:nth-child(even) {
       grid-column: 2/-1;
       grid-row: 1/-2;
+    }
+  }
+
+  .photo-grid__controls {
+    display: flex;
+    position: absolute;
+    bottom: $spacing-l;
+    right: $spacing-l;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: $spacing;
+
+    @media screen and (min-width: $mq-s) {
+      bottom: $grid-offset;
+      right: $grid-offset;
+    }
+  }
+
+  .photo-grid__button-prev,
+  .photo-grid__button-next {
+    border: none;
+    font-family: inherit;
+    padding: $spacing;
+    background-color: $color-white;
+    border: 3px solid $color-black;
+    cursor: pointer;
+
+    svg {
+      width: 1.5rem;
+      transition: all $speed ease-in;
+    }
+
+    &:hover {
+
+      svg {
+        transform: scale(1.5);
+      }
     }
   }
 </style>
