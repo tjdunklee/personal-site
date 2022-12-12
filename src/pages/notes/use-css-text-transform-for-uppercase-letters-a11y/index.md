@@ -15,9 +15,11 @@ During one of our remediation sessions, I noticed an interesting thing that happ
 
 ## Do This Instead
 ``` html
+<style>
 .your-heading-class {
   text-transform: uppercase;
 }
+</style>
 
 <h1 class="your-heading-class">See How It Works</h1>
 ```
