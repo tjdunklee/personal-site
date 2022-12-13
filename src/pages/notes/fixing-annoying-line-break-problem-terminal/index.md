@@ -1,7 +1,8 @@
 ---
 layout: ../../../layouts/PostLayout.astro
 title: "Fixing My Line Wrap Issue in iTerm 2"
-date: '2015-12-14 12:17:42'
+description: "A quick tip about how I fixed the line wrapping over itself in iTerm 2."
+pubDate: '2015-12-14 12:17:42'
 ---
 
 Sometimes you have one of those workflow issues that isn't quite annoying enough for you to do anything about. I had one of those problems with iTerm 2 for the last year and just today I decided I had enough! The problem was that when text was supposed to wrap to a new line (e.g. writing a long commit message) it would instead start to wrap over itself which made it unreadable.

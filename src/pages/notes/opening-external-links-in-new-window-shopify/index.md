@@ -1,7 +1,8 @@
 ---
 layout: ../../../layouts/PostLayout.astro
 title: 'How to Make Shopify External Links Open in a New Window'
-date: '2019-02-12 12:17:42'
+description: 'A quick way to make external links open in your Shopify theme without resorting to JavaScript.'
+pubDate: '2019-02-12 12:17:42'
 ---
 Recently I ran into an issue building out the navigation for a custom Shopify theme. I was suprised to find out that the Shopify navigation editing interface doesn't allow you to set a specific link to open in a new window. Internally, I had a little debate with myself like always when I am asked for this functionality. I personally feel that all links should open normally so the user can choose to open in a new window/tab if they so desire, and apparently other developers [share my opinion](https://css-tricks.com/use-target_blank/). That being said, sometimes there are bigger fish to fry.
 

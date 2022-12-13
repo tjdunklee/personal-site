@@ -13,7 +13,7 @@ import timTRex from '../assets/tim-t-rex-developer.jpeg';
 const unsortedNotes = await Astro.glob('./notes/**/*.md');
 const notes = unsortedNotes.sort(function (a, b) {
 	return (
-		new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+		new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 	);
 });
 const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
@@ -69,7 +69,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 			<div class="section__content">
 				<ul class="notes-list">
 					{nonDraftNotes.map(note => {
-						const date = new Date(note.frontmatter.date);
+						const date = new Date(note.frontmatter.pubDate);
 			
 						return (
 							<li class="notes-list__item">

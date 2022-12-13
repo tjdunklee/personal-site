@@ -1,7 +1,8 @@
 ---
 layout: ../../../layouts/PostLayout.astro
 title: 'Use CSS Text Transform for Better Accessibility'
-date: '2022-08-31 12:17:42'
+description: 'A quick tip to make your site more accessible and flexible using CSS instead of content entry.'
+pubDate: '2022-08-31 12:17:42'
 ---
 
 A large part of my work in the last few years has been improving the accessibilty of several different website frameworks. This involves a process we have been calling "Real-Time Accessibility Remediation" where our development and design teams attend a live session with an accessibility expert that navigates our work using a screen reader. I've learned so much from these sessions and I'm confident it has made me a much better developer. During these sessions I often pick up very small tips that can go a long way towards making the user experience better. Today I wanted to share one of those tips.

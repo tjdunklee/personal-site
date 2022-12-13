@@ -1,7 +1,8 @@
 ---
 layout: ../../../layouts/PostLayout.astro
 title: 'Automating the SVG Icon Section of a Style Guide'
-date: '2016-07-26 12:17:42'
+description: 'Using Gulp to automate production of an inventory of available SVG sprite icons.'
+pubDate: '2016-07-26 12:17:42'
 ---
 
 

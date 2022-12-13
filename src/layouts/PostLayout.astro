@@ -4,7 +4,7 @@ import {format, parse} from 'date-fns';
 import trail4 from '../assets/trail-4.svg';
 
 const {frontmatter} = Astro.props;
-const date = new Date(frontmatter.date);
+const date = new Date(frontmatter.pubDate);
 ---
 
 <Layout title={frontmatter.title}>

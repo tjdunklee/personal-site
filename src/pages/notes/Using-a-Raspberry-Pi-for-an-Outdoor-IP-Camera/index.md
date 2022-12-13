@@ -1,8 +1,8 @@
 ---
 layout: ../../../layouts/PostLayout.astro
 title: 'Using a Raspberry Pi for an Outdoor IP Camera'
-date: '2018-03-07 12:17:42'
-tags:
+description: 'My tinkering project to build an outdoor IP camera using a Raspberry PI, some Python, and commonly available parts.'
+pubDate: '2018-03-07 12:17:42'
 ---
 Being a kiteboarder, I'm always curious what the weather is doing in other local kiteboarding locations. The plethora of weather apps on my phone can only tell me so much, so I was determined to find a way to get a view into the current conditions from the comfort of my home or office. On top of that, I was hoping I could come up with a way to share this view with other kiteboarders in the area.
 
