@@ -1,8 +1,12 @@
-import rss from '@astrojs/rss';
+import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
-export const get = () => rss({
-  title: 'Tim Dunklee',
-  description: 'Thoughts and tips about web development, accessibilty, and tinkering.',
-  site: import.meta.env.SITE,
-  items: import.meta.glob('./notes/**/*.md')
-});
+export async function GET(context) {
+  return rss({
+    title: 'Tim Dunklee',
+    description: 'Thoughts and tips about web development, accessibilty, and tinkering.',
+    site: context.site,
+    items: await pagesGlobToRssItems(
+      import.meta.glob('./notes/**/*.{md,mdx}'),
+    ),
+  });
+}
