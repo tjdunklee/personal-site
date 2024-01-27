@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import logo from './logo-tim-dunklee.svg';
 
 export interface Props {
@@ -11,10 +12,10 @@ const { isHome } = Astro.props;
 
 <header class={isHome ? "header" : "header header-minimal"}>
   {isHome &&
-    <h1 class="heading"><img src={logo} alt="Tim Dunklee" width="489" height="237" /></h1>
+    <h1 class="heading"><Image src={logo} alt="Tim Dunklee" width="489" height="237" /></h1>
   }
   {!isHome &&
-    <a href="/" class="home-anchor"><img class="logo" src={logo} alt="Site Homepage" /></a>
+    <a href="/" class="home-anchor"><Image class="logo" src={logo} alt="Site Homepage" /></a>
   }
 </header>
 
