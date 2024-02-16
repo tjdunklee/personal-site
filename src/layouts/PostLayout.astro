@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "./Layout.astro";
 import {format, parse} from 'date-fns';
 import trail4 from '../assets/trail-4.svg';
@@ -21,7 +22,7 @@ const date = new Date(frontmatter.pubDate);
       </div>
 
       <div class="post__trail">
-        <img src={trail4} width="205" height="287" alt="" loading="lazy" />
+        <Image src={trail4} width="205" height="287" alt="" loading="lazy" />
       </div>
 
     </div>
