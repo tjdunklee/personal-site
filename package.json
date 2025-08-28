@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
-    "date-fns": "^4.1.0",
-    "sass": "^1.85.1"
+    "date-fns": "^4.1.0"
   }
 }

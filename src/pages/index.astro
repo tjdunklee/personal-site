@@ -8,7 +8,6 @@ import trail from '../assets/trail-1.svg';
 import trail2 from '../assets/trail-2.svg';
 import trail3 from '../assets/trail-3.svg';
 import trail4 from '../assets/trail-4.svg';
-import timTRex from '../assets/tim-t-rex-developer.jpeg';
 
 // Pull all notes, sort them by date, and exclude all drafts
 const unsortedNotes = await Astro.glob('./notes/**/*.md');
@@ -95,32 +94,29 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 
 </Layout>
 
-<style lang="scss">
-	@import '../styles/vars';
-
+<style>
 	.first-trail {
-		padding-left: $spacing-xxl * 3;
+		padding-left: calc(var(--spacing-xxl) * 3);
 	}
 
 	.section {
 		display: grid;
-		grid-gap: $spacing-xxl;
-		padding-top: $spacing;
+		grid-gap: var(--spacing-xxl);
+		padding-top: var(--spacing);
 	}
 
 	.section--split {
-
-		@media screen and (min-width: $mq-m) {
+		@media screen and (min-width: 768px) {
 			grid-template-columns: 2fr 3fr;
 			grid-template-rows: min-content 1fr;
-			grid-gap: $spacing-xl ($spacing-xxl * 2);
+			grid-gap: var(--spacing-xl) calc(var(--spacing-xxl) * 2);
 		}
 	}
 
 	.section__intro {
 		.section--indented & {
-			@media screen and (min-width: $mq-m) {
-				padding-left: $spacing-xxl * 2;
+			@media screen and (min-width: 48rem) {
+				padding-left: calc(var(--spacing-xxl) * 2);
 			}
 		}
 	}
@@ -131,7 +127,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 	}
 
 	.section__subheading {
-		margin-top: $spacing-s;
+		margin-top: var(--spacing-s);
 		text-transform: uppercase;
 	}
 
@@ -139,15 +135,15 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 		grid-row: span 2;
 
 		.section--full-width & {
-			@media screen and (min-width: $mq-m) {
-				padding-left: $spacing-xxl * 2;
+			@media screen and (min-width: 48rem) {
+				padding-left: calc(var(--spacing-xxl) * 2);
 			}
 		}
 	}
 
 	.about-image {
 
-		@media screen and (min-width: $mq-m) {
+		@media screen and (min-width: 48rem) {
 			margin: 0 auto;
 			max-width: 25rem;
 		}
@@ -160,7 +156,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 	}
 
 	.notes-list__item + .notes-list__item {
-		margin-top: $spacing-xxl;
+		margin-top: var(--spacing-xxl);
 	}
 
 	.note__heading {
@@ -182,7 +178,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 	}
 
 	.last-trail {
-		margin-top: $spacing-xxl;
+		margin-top: var(--spacing-xxl);
 		text-align: center;
 	}
 </style>

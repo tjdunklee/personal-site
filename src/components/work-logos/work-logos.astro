@@ -19,9 +19,7 @@
   </li>
 </ul>
 
-<style lang="scss">
-  @import '../../styles/vars';
-
+<style>
   .work-logos {
     display: grid;
     margin: 0 auto;
@@ -29,21 +27,21 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fit,5rem);
     grid-auto-rows: 5rem;
-    grid-gap: ($spacing-xxl * 2) $spacing-xxl;
+    grid-gap: calc(var(--spacing-xxl) * 2) var(--spacing-xxl);
     list-style: none;
 
-    @media screen and (min-width: $mq-s) {
+    @media screen and (min-width: 30rem) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (min-width: $mq-m) {
+    @media screen and (min-width: 48rem) {
       grid-template-columns: repeat(2, 1fr);
       max-width: 25rem;
     }
 	}
 
   .work-logos__item svg {
-    fill: $color-white;
+    fill: var(--color-white);
     width: 100%;
     height: 100%;
     max-width: 100%;

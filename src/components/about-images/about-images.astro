@@ -39,12 +39,10 @@ import timBiking from '../../assets/tim-mountain-bike.jpeg';
   </ul>
 </section>
 
-<style lang="scss">
-  @import '../../styles/vars';
-
-  $grid-offset: $spacing-xl * 2;
-
+<style>
   .photo-grid {
+    --grid-offset: calc(var(--spacing-xl) * 2);
+
     position: relative;
   }
 
@@ -53,8 +51,8 @@ import timBiking from '../../assets/tim-mountain-bike.jpeg';
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: $grid-offset 1fr $grid-offset;
-    grid-template-rows: $grid-offset 1fr $grid-offset;
+    grid-template-columns: var(--grid-offset) 1fr var(--grid-offset);
+    grid-template-rows: var(--grid-offset) 1fr var(--grid-offset);
     align-items: center;
     justify-content: center;
     aspect-ratio: 1/1;
@@ -78,7 +76,7 @@ import timBiking from '../../assets/tim-mountain-bike.jpeg';
     }
 
     &.is-current {
-      z-index: $zIndexSlides;
+      z-index: var(--zIndexSlides);
       opacity: 1;
     }
 
@@ -97,17 +95,17 @@ import timBiking from '../../assets/tim-mountain-bike.jpeg';
     position: relative;
     display: flex;
     position: absolute;
-    bottom: $spacing-l;
-    right: $spacing-l;
+    bottom: var(--spacing-l);
+    right: var(--spacing-l);
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: $spacing;
-    z-index: $zIndexSlideControls;
+    gap: var(--spacing);
+    z-index: var(--zIndexSlideControls);
 
-    @media screen and (min-width: $mq-s) {
-      bottom: $grid-offset;
-      right: $grid-offset;
+    @media screen and (min-width: 30rem) {
+      bottom: var(--grid-offset);
+      right: var(--grid-offset);
     }
   }
 
@@ -115,14 +113,14 @@ import timBiking from '../../assets/tim-mountain-bike.jpeg';
   .photo-grid__button-next {
     border: none;
     font-family: inherit;
-    padding: $spacing;
-    background-color: $color-white;
-    border: 3px solid $color-black;
+    padding: var(--spacing);
+    background-color: var(--color-white);
+    border: 3px solid var(--color-black);
     cursor: pointer;
 
     svg {
       width: 1.5rem;
-      transition: all $speed ease-in;
+      transition: all var(--speed) ease-in;
     }
 
     &:hover {
