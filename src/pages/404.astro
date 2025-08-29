@@ -2,15 +2,6 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import trail4 from '../assets/trail-4.svg';
-
-// Pull all notes, sort them by date, and exclude all drafts
-const unsortedNotes = await Astro.glob('./notes/**/*.md');
-const notes = unsortedNotes.sort(function (a, b) {
-	return (
-		new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-	);
-});
-const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 ---
 
 <Layout title="Tim Dunklee - Front End Web Developer - Minneapolis MN" isHome={false}>

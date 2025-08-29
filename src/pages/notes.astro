@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import {format, parse} from 'date-fns';
+import Layout from '../layouts/Layout.astro';
+import trail4 from '../assets/trail-4.svg';
+
+// Pull all notes, sort them by date, and exclude all drafts
+const unsortedNotes = await Astro.glob('./notes/**/*.md');
+const notes = unsortedNotes.sort(function (a, b) {
+	return (
+		new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+	);
+});
+const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
+---
+
+<Layout title="Notes" isHome={false}>
+	<div class="wrap wrap--narrow">
+
+		<section class="section section--indented section--full-width notes">
+			<div class="section__intro">
+				<header>
+					<h2 class="section__heading">Notes</h2>
+					<p class="h5 section__subheading">Sharing is caring.</p>
+				</header>
+			</div>
+			<div class="section__content">
+				<ul class="notes-list">
+					{nonDraftNotes.map(note => {
+						const date = new Date(note.frontmatter.pubDate);
+			
+						return (
+							<li class="notes-list__item">
+								<article class="note">
+									<span class="note__meta">{format(date, 'MMMM do, yyyy')}</span>
+									<h3 class="note__heading">
+										<a class="note__anchor" href={note.url}>{note.frontmatter.title}</a>
+									</h3>
+								</article>
+							</li>
+							)
+					})}
+				</ul>
+			</div>
+		</section>
+
+		<div class="last-trail">
+			<Image src={trail4} width="205" height="287" alt="" loading="lazy" />
+		</div>
+
+	</div>
+
+</Layout>
+
+<style>
+	.notes {
+		padding: calc(var(--spacing-xl)*4) 0 calc(var(--spacing-xl)*2);
+	}
+
+	.notes-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.notes-list__item + .notes-list__item {
+		margin-top: var(--spacing-xxl);
+	}
+
+	.note__heading {
+		margin: 0;
+		text-transform: none;
+	}
+
+	.note__anchor {
+		text-decoration: underline;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration: none;
+		}
+	}
+
+	.note__meta {
+		font-size: 1rem;
+	}
+
+	.last-trail {
+		margin-top: var(--spacing-xxl);
+		text-align: center;
+	}
+</style>
