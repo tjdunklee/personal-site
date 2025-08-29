@@ -16,4 +16,4 @@ I'm no product designer, but I was very happy with the simplicity of my design f
 ![Raspberry Pi for Apache](/images/notes/2016-weather-app-raspberry-pi.jpg)
 
 ## Next Steps
-The plan is to keep making this better and help organize our lives. I called it the "DunkStation" because I have bigger plans for it. The next thing on the agenda is getting our recipes stored for easy access. I'm planning on storing these in a Wordpress detached back-end and use the WP REST API to access this info using AngularJS. I'll update when that is complete!
+The plan is to keep making this better and help organize our lives. I called it the "DunkStation" because I have bigger plans for it. The next thing on the agenda is getting our recipes stored for easy access. I'm planning on storing these in a WordPress detached back-end and use the WP REST API to access this info using AngularJS. I'll update when that is complete!

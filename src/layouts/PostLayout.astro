@@ -7,16 +7,16 @@ import Layout from "./Layout.astro";
 import {format, parse} from 'date-fns';
 import trail4 from '../assets/trail-4.svg';
 
-const {frontmatter} = Astro.props;
-const date = new Date(frontmatter.pubDate);
+const data = Astro.props;
+const date = new Date(data.pubDate);
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={data.title}>
   <article class="post">
     <div class="wrap wrap--narrower">
 
       <header class="post__header">
-        <h1 class="h2 post__title">{frontmatter.title}</h1>
+        <h1 class="h2 post__title">{data.title}</h1>
         <p class="post__meta">{format(date, 'MMMM do, yyyy')}</p>
       </header>
   

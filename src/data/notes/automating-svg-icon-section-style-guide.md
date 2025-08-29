@@ -53,7 +53,7 @@ gulp.task('sprites', function () {
 
 
 ## 3. Include the Template in the Style Guide
-Almost any kind of language you are using will allow you to include a partial in your style guide page. I have been doing quite a bit of Wordpress work lately, so I'll show you the super simple way to do it in PHP.
+Almost any kind of language you are using will allow you to include a partial in your style guide page. I have been doing quite a bit of WordPress work lately, so I'll show you the super simple way to do it in PHP.
 
 ``` php
 <?php include("assets/images/icons-section.html"); ?>
