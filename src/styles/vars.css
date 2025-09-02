@@ -1,6 +1,6 @@
 :root {
   /* Media Query Breakpoints */
-  /* I wish I could use CSS custom properties for these, but the aren't supported in @media queries.
+  /* I wish I could use CSS custom properties for these, but they aren't supported in @media queries.
   Instead I'm just going to list them here. */
 
   /*
