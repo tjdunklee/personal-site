@@ -11,15 +11,6 @@ const notes = (await getCollection('notes')).sort(
 );
 
 const nonDraftNotes = notes.filter((note) => !note.data.draft);
-
-// Pull all notes, sort them by date, and exclude all drafts
-// const unsortedNotes = await Astro.glob('./notes/**/*.md');
-// const notes = unsortedNotes.sort(function (a, b) {
-// 	return (
-// 		new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-// 	);
-// });
-// const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 ---
 
 <Layout title="Notes" isHome={false}>
@@ -42,7 +33,7 @@ const nonDraftNotes = notes.filter((note) => !note.data.draft);
 								<article class="note">
 									<span class="note__meta">{format(date, 'MMMM do, yyyy')}</span>
 									<h3 class="note__heading">
-										<a class="note__anchor" href={`/notes/${note.id}`}>{note.data.title}</a>
+										<a class="note__anchor" href={`/notes/${note.id}/`}>{note.data.title}</a>
 									</h3>
 								</article>
 							</li>
