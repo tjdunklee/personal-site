@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.timdunklee.com',
@@ -8,5 +10,6 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark'
     }
-  }
+  },
+  integrations: [sitemap()]
 });
