@@ -1,26 +1,16 @@
 ---
 import { Image } from 'astro:assets';
-import {format, parse} from 'date-fns';
 import Layout from '../layouts/Layout.astro';
 import WorkLogos from '../components/work-logos/work-logos.astro';
 import AboutImages from '../components/about-images/about-images.astro';
+import Experience from '../components/experience/experience.astro';
 import trail from '../assets/trail-1.svg';
 import trail2 from '../assets/trail-2.svg';
 import trail3 from '../assets/trail-3.svg';
 import trail4 from '../assets/trail-4.svg';
-import timTRex from '../assets/tim-t-rex-developer.jpeg';
-
-// Pull all notes, sort them by date, and exclude all drafts
-const unsortedNotes = await Astro.glob('./notes/**/*.md');
-const notes = unsortedNotes.sort(function (a, b) {
-	return (
-		new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-	);
-});
-const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 ---
 
-<Layout title="Tim Dunklee - Front End Web Developer - Minneapolis MN" isHome={true}>
+<Layout title="Tim Dunklee - Web Developer - Minneapolis MN" isHome={true}>
 	<div class="wrap wrap--narrow">
 
 		<div class="first-trail">
@@ -60,30 +50,16 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 			</div>
 		</section>
 
-		<section class="section section--indented section--full-width">
+		<section class="section section--indented section--split">
 			<div class="section__intro">
 				<header>
-					<h2 class="section__heading">Notes</h2>
-					<p class="h5 section__subheading">Sharing is caring.</p>
+					<h2 class="section__heading">Experience</h2>
+					<p class="h5 section__subheading">I remember MySpace.</p>
 				</header>
+				<p>Please <a href="mailto:tjdunklee@gmail.com">contact me</a> for a more detailed resume.</p>
 			</div>
 			<div class="section__content">
-				<ul class="notes-list">
-					{nonDraftNotes.map(note => {
-						const date = new Date(note.frontmatter.pubDate);
-			
-						return (
-							<li class="notes-list__item">
-								<article class="note">
-									<span class="note__meta">{format(date, 'MMMM do, yyyy')}</span>
-									<h3 class="note__heading">
-										<a class="note__anchor" href={note.url}>{note.frontmatter.title}</a>
-									</h3>
-								</article>
-							</li>
-							)
-					})}
-				</ul>
+				<Experience />
 			</div>
 		</section>
 
@@ -95,94 +71,13 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 
 </Layout>
 
-<style lang="scss">
-	@import '../styles/vars';
-
+<style>
 	.first-trail {
-		padding-left: $spacing-xxl * 3;
-	}
-
-	.section {
-		display: grid;
-		grid-gap: $spacing-xxl;
-		padding-top: $spacing;
-	}
-
-	.section--split {
-
-		@media screen and (min-width: $mq-m) {
-			grid-template-columns: 2fr 3fr;
-			grid-template-rows: min-content 1fr;
-			grid-gap: $spacing-xl ($spacing-xxl * 2);
-		}
-	}
-
-	.section__intro {
-		.section--indented & {
-			@media screen and (min-width: $mq-m) {
-				padding-left: $spacing-xxl * 2;
-			}
-		}
-	}
-
-	.section__heading {
-		margin: 0;
-		text-transform: uppercase;
-	}
-
-	.section__subheading {
-		margin-top: $spacing-s;
-		text-transform: uppercase;
-	}
-
-	.section__content {
-		grid-row: span 2;
-
-		.section--full-width & {
-			@media screen and (min-width: $mq-m) {
-				padding-left: $spacing-xxl * 2;
-			}
-		}
-	}
-
-	.about-image {
-
-		@media screen and (min-width: $mq-m) {
-			margin: 0 auto;
-			max-width: 25rem;
-		}
-	}
-
-	.notes-list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.notes-list__item + .notes-list__item {
-		margin-top: $spacing-xxl;
-	}
-
-	.note__heading {
-		margin: 0;
-		text-transform: none;
-	}
-
-	.note__anchor {
-		text-decoration: underline;
-
-		&:hover,
-		&:focus-visible {
-			text-decoration: none;
-		}
-	}
-
-	.note__meta {
-		font-size: 1rem;
+		padding-left: calc(var(--spacing-xxl) * 3);
 	}
 
 	.last-trail {
-		margin-top: $spacing-xxl;
+		margin-top: var(--spacing-xxl);
 		text-align: center;
 	}
 </style>

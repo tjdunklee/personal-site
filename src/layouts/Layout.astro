@@ -1,5 +1,7 @@
 ---
-import '../styles/global.scss';
+import '../styles/normalize.css';
+import '../styles/vars.css';
+import '../styles/global.css';
 import Header from "../components/header/Header.astro";
 import Footer from "../components/footer/Footer.astro";
 
@@ -7,9 +9,7 @@ export interface Props {
 	title: string;
 	isHome?: boolean;
 }
-
-let { title }    = Astro.props.content || Astro.props;
-const { isHome } = Astro.props as Props;
+let { title, isHome } = Astro.props as Props;
 
 if ( !isHome ) {
 	title = `${title} | Tim Dunklee`;
@@ -26,8 +26,9 @@ if ( !isHome ) {
 		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="The personal portfolio of front-end web developer and boardsports enthusiast Tim Dunklee." />
+		<meta name="description" content="The personal portfolio of web developer and outdoor enthusiast Tim Dunklee." />
 		<meta name="msapplication-TileColor" content="#333333" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<title>{title}</title>
 	</head>
 	<body>

@@ -2,18 +2,9 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import trail4 from '../assets/trail-4.svg';
-
-// Pull all notes, sort them by date, and exclude all drafts
-const unsortedNotes = await Astro.glob('./notes/**/*.md');
-const notes = unsortedNotes.sort(function (a, b) {
-	return (
-		new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-	);
-});
-const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 ---
 
-<Layout title="Tim Dunklee - Front End Web Developer - Minneapolis MN" isHome={false}>
+<Layout title="Tim Dunklee - Web Developer - Minneapolis MN" isHome={false}>
 	<div class="wrap four-oh-four">
 		<h1 class="four-oh-four__heading">404</h1>
 		<p class="four-oh-four__description">Sorry, whatever you are looking for isn't here anymore.</p>
@@ -23,12 +14,10 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 	</div>
 </Layout>
 
-<style lang="scss">
-	@import '../styles/vars';
-
+<style>
 	.four-oh-four {
-		padding-top: $spacing-xxl;
-		padding-bottom: $spacing-xxl * 2;
+		padding-top: var(--spacing-xxl);
+		padding-bottom: calc(var(--spacing-xxl) * 2);
 		text-align: center;
 	}
 
@@ -36,7 +25,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 		margin: 0;
 		font-size: 8rem;
 
-		@media screen and (min-width: $mq-m) {
+		@media screen and (min-width: 48rem) {
 			font-size: 12rem;
 		}
 	}
@@ -44,7 +33,7 @@ const nonDraftNotes = notes.filter((note) => !note.frontmatter.draft);
 	.four-oh-four__description {
 		font-size: 1.5rem;
 
-		@media screen and (min-width: $mq-m) {
+		@media screen and (min-width: 48rem) {
 			font-size: 1.875rem;
 		}
 	}

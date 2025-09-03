@@ -1,0 +1,39 @@
+{
+  "jobs": [
+    {
+      "company": "General Mills",
+      "title": "Contract Senior Software Engineer",
+      "dates": "2020 - Present"
+    },
+    {
+      "company": "Freelance",
+      "title": "Senior Developer / UI Designer",
+      "dates": "2020 - Present"
+    },
+    {
+      "company": "Modern Tribe",
+      "title": "Senior Front-End Developer",
+      "dates": "2020 - 2022"
+    },
+    {
+      "company": "General Mills",
+      "title": "Brand Sites Manager / Senior Front-End Developer",
+      "dates": "2016 - 2019"
+    },
+    {
+      "company": "RAZR Marketing",
+      "title": "Contact Front-End Developer",
+      "dates": "2015 - 2016"
+    },
+    {
+      "company": "space150",
+      "title": "Front-End Developer /Senior Front-End Developer",
+      "dates": "2012 - 2015"
+    },
+    {
+      "company": "Wells Fargo Home Mortgage",
+      "title": "UI Developer",
+      "dates": "2010 - 2012"
+    }
+  ]
+}

@@ -1,6 +1,3 @@
-@use '_normalize.css';
-@use '_vars' as *;
-
 @font-face {
   font-family: 'Oswald';
   src: url('/fonts/oswald-700.woff2') format('woff2');
@@ -51,11 +48,11 @@ svg {
 body {
   font-size: 1.125rem;
   line-height: 1.5;
-  font-family: $mainFont;
-  color: $color-white;
-  background-color: $color-black;
+  font-family: var(--mainFont);
+  color: var(--color-white);
+  background-color: var(--color-black);
 
-  @media screen and (min-width: $mq-m) {
+  @media screen and (min-width: 48rem) {
     font-size: 1.25rem;
   }
 }
@@ -64,30 +61,30 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   font-weight: 700;
   line-height: 1.1;
-  font-family: $strongFont;
+  font-family: var(--strongFont);
 }
 
 h1, .h1 {
-  font-size: 3.75rem; // 60px
+  font-size: 3.75rem; /* 60px */
 }
 h2, .h2 {
-  font-size: 3rem; // 48px
+  font-size: 3rem; /* 48px */
 }
 h3, .h3 {
-  font-size: 2.25rem; // 36px
+  font-size: 2.25rem; /* 36px */
 }
 h4, .h4 {
-  font-size: 1.5rem; // 24px
+  font-size: 1.5rem; /* 24px */
 }
 h5, .h5 {
-  font-size: 1.25rem; // 20px
+  font-size: 1.25rem; /* 20px */
 }
 .h6 {
-  font-size: 1rem; // 16px
+  font-size: 1rem; /* 16px */
 }
 
 a, a:visited {
-  color: $color-white;
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -105,7 +102,7 @@ p a {
 }
 
 p {
-  margin-bottom: $spacing-xl;
+  margin-bottom: var(--spacing-xl);
 
   &:last-child {
     margin-bottom: 0;
@@ -119,8 +116,8 @@ p {
 .wrap {
   max-width: 75rem;
   margin: 0 auto;
-  padding-left: $spacing-l;
-  padding-right: $spacing-l;
+  padding-left: var(--spacing-l);
+  padding-right: var(--spacing-l);
 }
 
 .wrap--narrow {
@@ -135,7 +132,7 @@ p {
   HELPERS
   ========================================================================== */
 
-// Hiding w/o display:none; for accessibility
+/* Hiding w/o display:none; for accessibility */
 .visuallyhidden {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -145,42 +142,88 @@ p {
 }
 
 /*==========================================================================
+  SECTIONS
+  - used on both homepage and notes
+========================================================================== */
+.section {
+  display: grid;
+  grid-gap: var(--spacing-xxl);
+  padding-top: var(--spacing);
+}
+
+.section--split {
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: min-content 1fr;
+    grid-gap: var(--spacing-xl) calc(var(--spacing-xxl) * 2);
+  }
+}
+
+.section__intro {
+  .section--indented & {
+    @media screen and (min-width: 48rem) {
+      padding-left: calc(var(--spacing-xxl) * 2);
+    }
+  }
+}
+
+.section__heading {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.section__subheading {
+  margin-top: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.section__content {
+  grid-row: span 2;
+
+  .section--full-width & {
+    @media screen and (min-width: 48rem) {
+      padding-left: calc(var(--spacing-xxl) * 2);
+    }
+  }
+}
+
+/*==========================================================================
   POSTS
   - handles both notes and also work details
 ========================================================================== */
 
 .post {
-  padding: $spacing-xl*3 0 $spacing-xl*2;
+  padding: calc(var(--spacing-xl)*3) 0 calc(var(--spacing-xl)*2);
 }
 
 .post__header {
-  margin-bottom: $spacing-xl;
+  margin-bottom: var(--spacing-xl);
 }
 
 .post__title {
-  margin-bottom: $spacing;
+  margin-bottom: var(--spacing);
 }
 
 .post__callout {
   font-size: 1.5rem;
 
-  @media screen and (min-width: $mq-m) {
+  @media screen and (min-width: 48rem) {
     font-size: 1.8rem;
   }
 }
 
 .post__meta {
   text-transform: uppercase;
-  font-family: $strongFont;
+  font-family: var(--strongFont);
   font-weight: 700;
   font-size: 1rem;
 }
 
 .post__details {
-  margin-bottom: $spacing-xl * 2;
-  margin-top: $spacing-xl * 2;
+  margin-bottom: calc(var(--spacing-xl) * 2);
+  margin-top: calc(var(--spacing-xl) * 2);
 
-  @media screen and (min-width: $mq-m) {
+  @media screen and (min-width: 48rem) {
     display: flex;
     justify-content: space-between;
   }
@@ -188,16 +231,16 @@ p {
 
 .post__details-section {
   & + & {
-    margin-top: $spacing-xl;
+    margin-top: var(--spacing-xl);
 
-    @media screen and (min-width: $mq-m) {
+    @media screen and (min-width: 48rem) {
       margin-top: 0;
     }
   }
 }
 
 .post__details-heading {
-  margin-bottom: $spacing;
+  margin-bottom: var(--spacing);
 }
 
 .post__details-list {
@@ -212,8 +255,8 @@ p {
 
 .post__content {
   h1, h2, h3, h4, h5 {
-    margin-top: $spacing-xl * 2;
-    margin-bottom: $spacing;
+    margin-top: calc(var(--spacing-xl) * 2);
+    margin-bottom: var(--spacing);
 
     &:first-child {
       margin-top: 0;
@@ -225,21 +268,21 @@ p {
   h4 { font-size: 1rem; }
 
   ul, ol {
-    margin-left: $spacing-xl;
-    margin-bottom: $spacing-xl;
+    margin-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
     font-size: 0.9em;
   }
 
   li + li {
-    margin-top: $spacing * 0.5;
+    margin-top: calc(var(--spacing) * 0.5);
   }
 
   pre {
-    padding: $spacing-l;
+    padding: var(--spacing-l);
   }
 }
 
 .post__trail {
-  margin-top: $spacing-xxl;
+  margin-top: var(--spacing-xxl);
   text-align: center;
 }

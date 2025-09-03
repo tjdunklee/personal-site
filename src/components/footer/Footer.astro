@@ -25,17 +25,15 @@ const year = currentTime.getFullYear();
   </div>
 </footer>
 
-<style lang="scss">
-  @import '../../styles/vars';
-
+<style>
   .footer {
-    padding-top: $spacing-xxl;
-    padding-bottom: $spacing-xxl;
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
     text-align: center;
   }
 
   .contact-email {
-    font-family: $strongFont;
+    font-family: var(--strongFont);
     font-weight: 700;
     font-size: 1.2rem;
   }
@@ -43,8 +41,8 @@ const year = currentTime.getFullYear();
   .social__item {
     display: inline-block;
 
-    & + & {
-      margin-left: $spacing;
+    & + .social__item {
+      margin-left: var(--spacing);
     }
 
     &:hover {
@@ -54,14 +52,14 @@ const year = currentTime.getFullYear();
   }
   
   .social-icon {
-    fill: $color-white;
+    fill: var(--color-white);
     width: 2.5rem;
     height: 2.5rem;
-    transition: all $speed;
+    transition: all var(--speed);
   }
 
   .copyright {
-    margin-top: $spacing-xxl * 2;
+    margin-top: calc(var(--spacing-xxl) * 2);
     font-size: 1rem;
   }
 

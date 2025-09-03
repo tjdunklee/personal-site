@@ -1,0 +1,62 @@
+---
+import { jobs } from '../../data/jobs.json';
+
+export interface JobProps {
+	company: string;
+	title: string;
+  dates: string;
+}
+---
+
+<ul class="experience-list">
+  {jobs.map((job: JobProps) => (
+    <li class="experience-list__item">
+      <div class="job">
+        <div class="job__header">
+          <h3 class="job__company">{job.company}</h3>
+          <div class="job__title">{job.title}</div>
+        </div>
+        <div class="h5 job__dates">{job.dates}</div>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .experience-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (min-width: 61.25rem) {
+      padding-right: var(--spacing-xxl);
+    }
+  }
+
+  .experience-list__item + .experience-list__item {
+    margin-top: var(--spacing-xxl);
+  }
+  
+  .job {
+    @media screen and (min-width: 30rem) {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xl);
+    }
+  }
+
+  .job__company {
+    margin: 0;
+  }
+
+  .job__title {
+    margin-top: var(--spacing-s);
+  }
+
+  .job__dates {
+    flex-shrink: 0;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+
+</style>
