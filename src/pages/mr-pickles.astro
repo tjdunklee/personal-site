@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import trail4 from '../assets/trail-4.svg';
+import mrPickles from '../assets/mr-pickles-the-cow-cat.jpg';
+---
+
+<Layout title="Tim Dunklee - Web Developer - Minneapolis MN" isHome={false}>
+	<div class="wrap mr-pickles">
+		<h1 class="mr-pickles__heading">Mr. Pickles</h1>
+		<p class="mr-pickles__description">The best cow cat in the business.</p>
+		<Image width="576" height="768" src={mrPickles} loading="lazy" alt="A cat that has the colorings of a cow looking directly at the camera" />
+		<div class="mr-pickles__trail">
+			<Image src={trail4} width="205" height="287" alt="" loading="lazy" />
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.mr-pickles {
+		padding-top: var(--spacing-xxl);
+		padding-bottom: calc(var(--spacing-xxl) * 2);
+		text-align: center;
+	}
+
+	.mr-pickles__heading {
+		margin: 0;
+		font-size: 3rem;
+
+		@media screen and (min-width: 48rem) {
+			font-size: 4rem;
+		}
+	}
+
+	.mr-pickles__description {
+		font-size: 1.5rem;
+		margin-top: 0;
+
+		@media screen and (min-width: 48rem) {
+			font-size: 1.875rem;
+		}
+	}
+
+	.mr-pickles__trail {
+		margin-top: var(--spacing-xxl);
+	}
+</style>
